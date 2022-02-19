@@ -1,0 +1,162 @@
+{% extends 'base-index.html' %}
+{% load static %}
+{% block title %}
+Доска объявлений OLX.uz 
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="search-first">
+        <img src="{% static 'search.PNG' %}" alt="">
+        <form action="{% url 'search_url' %}" method="GET" class="d-flex">
+            <input type="search" placeholder="... объявлений рядом" class="input-search-first" name="search_input">
+            <button class="btn-search">Поиск</button>
+        </form>
+    </div>
+</div>
+<div class="categories">
+    <div class="title-widget">
+        <p class="title">Главные категории</p>
+    </div>
+    <div class="category-widget">
+        {% for category in categories %}
+        <div class="card-widget">
+            {% if category.image.url != null %}
+            <div class="img-card-widge">
+                <img src="{{category.image.url}}" alt="..." class="img-card">
+            </div>
+            {% else %}
+            <div class="img-card-widget">
+                <img src="/beige_бежевый_aesthetic_эстетика_wallpaper_coffee_кофе_обои_foundalighter.jpg" alt="..." class="img-card">
+            </div>
+            {% endif %}
+            <div class="body-card">
+                <a href="{{category.get_link}}">
+                    <p class="title-card">{{category.title}}</p> 
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="reklama-widget">
+    <p>Здесь должна быть реклама, но мне, к сожалению, за неё не платили</p>
+</div>
+
+<p class="title-premium-card">Премиум объявления</p>
+<div class="premium-card-widget">
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">Электроскутер для пожилых</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                1000 y.e
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">Гитара акустическая 3801</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                770 000 сум
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">AIMIX кармикс + бетонный насос дизелный</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                460 000 000 сум
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">Стол лофт judayam baquvvat, qulay...</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                1000 y.e
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">Unitaz sotiladi yangi</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                1000 y.e
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body">Экскаватор XCMG XE150WB</p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Ташкент, Сергелийский район - 16 февр.</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                1 330 000 000 сум
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

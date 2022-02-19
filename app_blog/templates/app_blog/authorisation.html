@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Доска объявлений OLX.uz 
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="author-widget">
+        <div class="head-register">
+            <a href="{% url 'login' %}">
+                <div class="head-register-first">
+                    <a href="{% url 'login' %}". class="head-register-first-a">Войти</a>
+                </div>
+            </a>
+            <a href="{% url 'register' %}">
+                <div class="head-register-second">
+                    <a href="{% url 'register' %}" class="head-register-second-a">Регистрация</a>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

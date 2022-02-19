@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+Доска объявлений OLX.uz
+{% endblock %}
+{% block content %}
+<div class="content-ad">
+    <p class="create-ad">Создать объявление</p>
+    <div class="ad-name-widget">
+        <form action="" method="">
+            <p class="ad-name">Опишите в подробностях</p>
+            <p class="ad-name-second">Укажите название*</p>
+            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget">
+            <p>Выберите категорию*</p>
+            <select name="" id="" class="category-select">
+                <option value="" class="category-select-option">Детский мир</option>
+                <option value="" class="category-select-option">Недвижимость</option>
+                <option value="" class="category-select-option">Транспорт</option>
+                <option value="" class="category-select-option">Работа</option>
+                <option value="" class="category-select-option">Животные</option>
+                <option value="" class="category-select-option">Дом и сад</option>
+                <option value="" class="category-select-option">Электроника</option>
+                <option value="" class="category-select-option">Бизнес и услуги</option>
+                <option value="" class="category-select-option">Мода и стиль</option>
+                <option value="" class="category-select-option">Хобби, отдых и спорт</option>
+            </select>
+            <p class="ad-name" style="margin-top: 10%;">Фото</p>
+            <p class="ad-name-second" style="color: gray; font-size: 13px;">Первое фото будет на обложке объявления. Перетащите, чтобы изменить порядок.</p>
+            <!-- добавление файлов, фото, 4x2, 1 бокс - добавить фото бг зеленоватый, бг блоков lavender -->
+            <p class="ad-name-second" style="margin-top: 10%;">Описание*</p>
+            <textarea name="" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
+            <p class="ad-name" style="margin-top: 10%;">Контакная информация</p>
+            <p class="ad-name-second">Местоположение*</p>
+            <input type="text" class="object-input-widget" placeholder="Название города или индекс">
+            <p class="ad-name-second">Контактное лицо</p>
+            <input type="text" class="object-input-widget" placeholder="{{user.username}}">
+            <p class="ad-name-second">Email-адрес</p>
+            <input type="email" class="object-input-widget" placeholder="{{user.email}}">
+            <p class="ad-name-second">Номер телефона</p>
+            <input type="number" class="object-input-widget" placeholder="Ваш номер телефона">
+            <div class="send-widget">
+                <button class="send-btn">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
