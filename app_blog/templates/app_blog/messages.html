@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Доска объявлений OLX.uz
+{% endblock %}
+{% block content %}
+<div class="bg-white">
+    <div class="title-message-widget">
+        <div class="title-message">
+            <p class="title-message-p">Сообщения</p>
+        </div>
+        <div class="title-pay-widget">
+            <div class="balance-widget">
+                <div class="balance-widget-spans">
+                    <span style="padding-right: 15px;">Баланс: 0 сум</span>
+                    <span>Доступный баланс: 0 сум</span>
+                </div>
+                <img src="{% static 'balance.PNG' %}" alt="">
+                <div class="balance-widget-btns">
+                    <button class="pay-koshelek" style="margin-right: 15px;">Пополнить кошелёк</button>
+                    <button class="buy-packet">Купить пакет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="learn-more">
+        <a href="">Узнать больше</a>
+    </div>
+    <div class="mini-navbar-message-widget">
+        <ul class="mini-menu">
+            <li class="mini-li-nav" style="padding-left: 0;"><a href="">Объявления</a></li>
+            <li class="mini-li-nav"><a href="">Сообщения</a></li>
+            <li class="mini-li-nav"><a href="">Платежи и счёт OLX</a></li>
+            <li class="mini-li-nav"><a href="">Ищу работу</a></li>
+            <li class="mini-li-nav"><a href="">Настройки</a></li>
+        </ul>
+    </div>
+</div>
+<div class="bg-lavender">
+    <div class="messages-widget">
+        <ul class="messages">
+            <li class="messages-li"><a href="">Недавние</a></li>
+            <li class="messages-li"><a href="">Все отправленные</a></li>
+            <li class="messages-li"><a href="">Архивные</a></li>
+        </ul>
+        <div class="month">
+            <img src="{% static 'balance-lavender.PNG' %}" alt="">
+            <span>Ваши сообщения будут храниться 4 месяца</span>
+        </div>
+    </div>
+    <div class="select-messages">
+        <p>Выберите сообщения</p>
+        <select name="" id="" class="select-message">
+            <option value="">Недавние</option>
+            <option value="">Непрочитанные</option>
+            <option value="">Важные</option>
+            <option value="">Отправленные вами</option>
+            <option value="">Полученные</option>
+        </select>
+    </div>
+</div>
+{% endblock %}

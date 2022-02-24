@@ -14,34 +14,34 @@
             <img src="/app_blog/static/olx.png" class="nav-logo">
         </div>
         <ul class="menu">
-            <a href="">
+            {% if user.is_authenticated %}
+            <a href="{% url 'messages' %}">
                 <li class="li-nav">Сообщения</li>
             </a>
-            <a href="">
+            <a href="{% url 'favorites' %}">
                 <li class="li-nav">Избранное</li>
             </a>
-            {% if user.is_authenticated %}
-            <div class="dropdown">
-                <ul class="dropdown-menu">
-                    <li class="dropdown-li">
-                        Мой профиль
-                        <div class="dropdown-content">
-                            <a href="{% url 'logout' %}"><p class="dropdown-p">Выйти</p></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            {% else %}
-            <a href="{% url 'authorisation' %}">
-                <li class="li-nav">Мой профиль</li>
+            <a href="{% url 'logout' %}">
+                <li class="li-nav">
+                    Выйти из профиля
+                </li>
             </a>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <a href="{% url 'add_post' %}">
+            <a href="{% url 'addpost' %}">
                 <li class="li-nav">Подать объявление</li>
             </a>
             {% else %}
-            <a href="{% url 'register' %}">
+            <a href="{% url 'authorisation' %}">
+                <li class="li-nav">Сообщения</li>
+            </a>
+            <a href="{% url 'authorisation' %}">
+                <li class="li-nav">Избранное</li>
+            </a>
+            <a href="{% url 'authorisation' %}">
+                <li class="li-nav">
+                    Войти в профиль
+                </li>
+            </a>
+            <a href="{% url 'authorisation' %}">
                 <li class="li-nav">Подать объявление</li>
             </a>
             {% endif %}

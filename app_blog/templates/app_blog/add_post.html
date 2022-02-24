@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 {% block title %}
+{% load static %}
 Доска объявлений OLX.uz
 {% endblock %}
 {% block content %}
 <div class="content-ad">
     <p class="create-ad">Создать объявление</p>
     <div class="ad-name-widget">
-        <form action="" method="">
+        <form action="" method="POST">
+            {% csrf_token %}
             <p class="ad-name">Опишите в подробностях</p>
             <p class="ad-name-second">Укажите название*</p>
-            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget">
+            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title">
             <p>Выберите категорию*</p>
-            <select name="" id="" class="category-select">
+            <select name="category" id="" class="category-select">
                 <option value="" class="category-select-option">Детский мир</option>
                 <option value="" class="category-select-option">Недвижимость</option>
                 <option value="" class="category-select-option">Транспорт</option>
@@ -23,14 +25,21 @@
                 <option value="" class="category-select-option">Мода и стиль</option>
                 <option value="" class="category-select-option">Хобби, отдых и спорт</option>
             </select>
-            <p class="ad-name" style="margin-top: 10%;">Фото</p>
-            <p class="ad-name-second" style="color: gray; font-size: 13px;">Первое фото будет на обложке объявления. Перетащите, чтобы изменить порядок.</p>
-            <!-- добавление файлов, фото, 4x2, 1 бокс - добавить фото бг зеленоватый, бг блоков lavender -->
+            <div class="photo-widget">
+                <p class="ad-name" style="margin-top: 10%;">Фото</p>
+                <p class="ad-name-second" style="color: gray; font-size: 13px;">Нажмите на "Добавить фото", чтобы добавить фото к вашему объявлению.</p>
+                <p class="photo-label-btn">
+                    <label for="files" class="photo-label">Добавить фото</label>
+                </p>
+                <input type="file" id="files" style="visibility: hidden;">
+            </div>
             <p class="ad-name-second" style="margin-top: 10%;">Описание*</p>
-            <textarea name="" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
+            <textarea name="description" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
             <p class="ad-name" style="margin-top: 10%;">Контакная информация</p>
             <p class="ad-name-second">Местоположение*</p>
-            <input type="text" class="object-input-widget" placeholder="Название города или индекс">
+            <input type="text" class="object-input-widget" placeholder="Название города или индекс" name="sity_title">
+            <p class="ad-name-second">Цена</p>
+            <input type="text" class="object-input-widget" placeholder="Цена" name="price">
             <p class="ad-name-second">Контактное лицо</p>
             <input type="text" class="object-input-widget" placeholder="{{user.username}}">
             <p class="ad-name-second">Email-адрес</p>

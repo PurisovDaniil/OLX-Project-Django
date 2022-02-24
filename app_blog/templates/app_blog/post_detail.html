@@ -1,48 +1,89 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-{{post.title}}
+Дополнительно о посте
 {% endblock %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            {% if post.image.url != null %}
-            <img src="{{post.image.url}}" alt="">
-            {% endif %}
-            <h3>{{post.title}}</h3>
-            <p>{{post.text}}</p>
-            <p><b>Просмотров: {{post.views}}</b></p>
-            <p><i>{{post.date|date:'d, F, Y'}}</i></p>
-            <hr>
-            <p>
-                <i>
-                    Комментариев: {{post.coment_set_count}}
-                </i>
-            </p>
-            <h3>Оставьте ваш комментарий</h3>
-            {% if user.is_authenticated %}
-            <form action="{% url 'comment' post.slug%}" method="POST">
-                {% csrf_token %}
-                <p>
-                    <textarea name="text" class="form-control"></textarea>
-                </p>
-                <p class="text-right">
-                    <button class="btn btn-outline-primary">Отправить</button>
-                </p>
-            </form>
-            {% else %}
-            <p>Чтобы оставить ваш комментарий <a href="{% url 'register' %}">Зарегистрируйтесь</a></p>
-            {% endif %}
-            <hr>
-            {% for comment in post.comment_set.all %}
-            <div class="col-md-12">
-                <h3>{{comment.user.username}}</h3>
-                <p>{{comment.text}}</p>
-                <p class="text-right">{{comment.date|timesince}} назад</p>
+<div class="post-detail-contact-content">
+    <div class="post-detail-photo">
+        {% if post.image.url != null %}
+        <img src="{{post.image.url}}" alt="" class="post-photo">
+        {% else %}
+        <img src="{% static '1.jpg' %}" alt="" class="post-photo">
+        {% endif %}
+    </div>
+    <div class="d-block">
+        <div class="contact-widget">
+            <p class="p-username">Пользователь:</p>
+            <div class="contact">
+                <div class="contact-avatar-widget">
+                    <img src="{% static 'avatar.PNG' %}" alt="" class="contact-avatar">
+                </div>
+                <div class="contact-number-widget">
+                    <p class="user-number">998 91 396 06 86</p>
+                    <a href="" class="all-ads">Все объявления автора</a>
+                </div>
             </div>
-            {% endfor %}
+            <div class="contact-btns">
+                <div class="contact-btn-number-widget">
+                    <button class="contact-btn-number">Написать сообщение</button>
+                </div>
+            </div>
         </div>
+        <div class="gps-widget">
+            <p class="gps-p">Местоположение:</p>
+            <div class="d-flex">
+                <div>
+                    <img src="{% static 'gps-tracker.PNG' %}" alt="" style="width: 50px;">
+                </div>
+                <div style="display: flex; align-items: center; width: 80%;">
+                    <span>Ташкент, Шайхантахурский район</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-description-widget">
+    <div class="post-description">
+        <div class="d-flex" style="justify-content: space-between;">
+            <p>Опубликовано: 20 февраля 2022 г.</p>
+            <button class="favorite-btn"><img src="{% static 'premium-favorite.PNG' %}" alt=""></button>
+        </div>
+        <div class="post-detail-title-widget">
+            <p class="post-detail-title">iPhone 13 Pro Max</p>
+            <p class="post-price">Потеря девственности</p>
+            <p class="post-detail-description">Описание:</p>
+            <p class="post-detail-dsc">Кто посмотрел тот лох</p>
+            <hr>
+            <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <p class="views-post-detail">Просмотров: 94</p>
+                <p><a href="" class="d-flex" style="align-items: center; color: black;">
+                    <img src="{% static 'red-flag.PNG' %}" alt="">Пожаловаться
+                </a></p>
+            </div>
+        </div>
+    </div>
+    <div class="message-description-widget">
+        <form action="" method="">
+            <div class="author-description">
+                <div class="d-flex" style="align-items: center; justify-content: space-between;">
+                    <div class="d-flex" style="align-items: center;">
+                        <img src="{% static 'avatar.PNG' %}" alt="">
+                        <p>Kakoy ta Boburbek</p>
+                    </div>
+                    <div class="d-flex" style="align-items: center;">
+                        <img src="{% static 'call.PNG' %}" alt="">
+                        <p style="font-weight: bold; font-size: 20px;">+998 97 923 56 66</p>
+                    </div>
+                </div>
+                <div class="message-send">
+                    <textarea name="" id="" placeholder="Напишите сообщение..." style="resize: none;" class="message-send-textarea"></textarea>
+                </div>
+                <div class="message-send-btn-widget">
+                    <button class="message-send-btn">Отправить</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}

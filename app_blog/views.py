@@ -7,7 +7,7 @@ from .models import Post, Category, Image, Profile, Comment
 # Create your views here.
 
 def index(request):
-    news = Post.objects.filter(publish = 1).order_by('-views')[:3]
+    news = Post.objects.all
     categories = Category.objects.all()[:12]
     context = {'news': news, 'categories': categories}
     return render(request, 'app_blog/index.html', context)
@@ -43,11 +43,8 @@ def user_detail(request, username):
     return render(request, 'blog/user_detail.html', context)
 
 
-def post_detail(request, slug):
-    post = Post.objects.get(slug__exact = slug)
-    post.views += 1
-    post.save()
-    return render(request, 'app_blog/post_detail.html', {'post':post})
+def post_detail(request):
+    return render(request, 'app_blog/post_detail.html')
 
 
 def comment(request, slug):
@@ -73,5 +70,11 @@ def profile(request):
 def authorisation(request):
     return render(request, 'app_blog/authorisation.html')
 
-def add_post(request):
+def addpost(request):
     return render(request, 'app_blog/add_post.html')
+
+def favorites(request):
+    return render(request, 'app_blog/favorites.html')
+
+def messages(request):
+    return render(request, 'app_blog/messages.html')
