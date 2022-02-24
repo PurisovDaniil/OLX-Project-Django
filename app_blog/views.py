@@ -8,7 +8,7 @@ from .models import Post, Category, Image, Profile, Comment
 
 def index(request):
     news = Post.objects.all
-    categories = Category.objects.all()[:12]
+    categories = Category.objects.all()
     context = {'news': news, 'categories': categories}
     return render(request, 'app_blog/index.html', context)
 

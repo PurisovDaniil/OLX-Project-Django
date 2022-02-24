@@ -48,15 +48,33 @@
             <span>Ваши сообщения будут храниться 4 месяца</span>
         </div>
     </div>
-    <div class="select-messages">
-        <p>Выберите сообщения</p>
-        <select name="" id="" class="select-message">
-            <option value="">Недавние</option>
-            <option value="">Непрочитанные</option>
-            <option value="">Важные</option>
-            <option value="">Отправленные вами</option>
-            <option value="">Полученные</option>
-        </select>
-    </div>
+    <form action="" class="select-message-form">
+        <div class="select-messages">
+            <p class="select-mes">Выберите сообщения</p>
+            <select name="" id="" class="select-message">
+                <option value="">Недавние</option>
+                <option value="">Непрочитанные</option>
+                <option value="">Важные</option>
+                <option value="">Отправленные вами</option>
+                <option value="">Полученные</option>
+            </select>
+        </div>
+    </form>
+    <form action="" class="chat-select-form">
+        <div class="chat-message">
+            <div class="chat-select-message">
+                <input type="checkbox" class="custom-checkbox" id="all"><label for="all" style="color: rgb(127, 151, 153);">All</label>
+            </div>
+            <div class="chat-message-widget">
+                <p class="chat-message-p">Пользователь</p>
+                <p class="chat-message-p">Объявление</p>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="bg-white">
+                
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}

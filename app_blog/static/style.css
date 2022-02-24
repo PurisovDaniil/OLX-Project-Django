@@ -241,7 +241,7 @@ a{
     background-color: white;
 }
 .card-widget{
-    width: 150px;
+    width: 10%;
 }
 .category-widget{
     display: flex;
@@ -921,6 +921,9 @@ a{
 }
 .messages-li a{
     color: #002f34;
+    background-color: white;
+    padding: 13px;
+    border-radius: 15px;
 }
 .messages-li a:hover{
     border-bottom: #002f34 solid 0.5px;
@@ -937,9 +940,76 @@ a{
     padding: 0 20px 0 40px;
 }
 .select-message{
-    padding: 15px 15px 15px 20px;
+    padding: 15px 50px 15px 25px;
     outline: none;
     border: none;
     font-size: medium;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+.select-mes{
+    color: rgb(127, 151, 153);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.chat-message{
+    padding: 33px;
+    display: flex;
+}
+.chat-select-message{
+    display: flex;
+}
+.input-chb-span{
+    padding: 0 7px 0;
+}
+.custom-checkbox{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid black;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.custom-checkbox:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+.custom-checkbox:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+.custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+}
+.chat-message-widget{
+    display: flex;
+}
+.chat-message-p{
+    padding: 0 35px 0 55px;
+    color: rgb(127, 151, 153);
+}
+.chat{
+    padding: 27px;
+    padding-top: 0;
 }
