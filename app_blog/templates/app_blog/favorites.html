@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Избранные объявления
 {% endblock %}
 {% block content %}
-
+<div class="favorites-widget">
+    <div class="favorites-p">
+        <p>Избранные объявления</p>
+    </div>
+    <ul class="favorites-menu">
+        <li class="li-favorites"><a href="">Избранные объявления</a></li>
+        <li class="li-favorites"><a href="">Избранные результаты поиска</a></li>
+        <li class="li-favorites"><a href="">Недавно просмотренные</a></li>
+    </ul>
+</div>
+<div class="favorites-nomes-widget">
+    <div class="favorites-nomes">
+        <div class="favorites-nomes-img-widget">
+            <img src="{% static 'nomes-favorites.PNG' %}" alt="" class="favorites-nomes-img">
+        </div>
+        <p class="favorites-nomes-p-main">Нет избранных объявлений</p>
+        <p class="favorites-nomes-p-second">Добавить в избранные можно со страницы объявления либо со страницы списка объявлений</p>
+        <p class="favorites-nomes-p-second">Теперь избранные объявения всегда доступны на любом компьютере, а также на мобильной версии сайта, после входа в Мои объявления</p>
+    </div>
+</div>
 {% endblock %}

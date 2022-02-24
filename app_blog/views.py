@@ -78,3 +78,18 @@ def favorites(request):
 
 def messages(request):
     return render(request, 'app_blog/messages.html')
+
+def favorites_search(request):
+    return render(request, 'app_blog/favorites_search.html')
+
+def favorites_lastseen(request):
+    return render(request, 'app_blog/favorites_lastseen.html')
+
+def messages_ads(request):
+    return render(request, 'app_blog/messages_ads.html')
+
+def messages_settings(request):
+    return render(request, 'app_blog/messages_settings.html')
+
+def messages_wallet(request):
+    return render(request, 'app_blog/messages_wallet.html')

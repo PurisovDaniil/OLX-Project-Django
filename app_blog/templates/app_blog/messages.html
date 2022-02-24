@@ -31,7 +31,6 @@
             <li class="mini-li-nav" style="padding-left: 0;"><a href="">Объявления</a></li>
             <li class="mini-li-nav"><a href="">Сообщения</a></li>
             <li class="mini-li-nav"><a href="">Платежи и счёт OLX</a></li>
-            <li class="mini-li-nav"><a href="">Ищу работу</a></li>
             <li class="mini-li-nav"><a href="">Настройки</a></li>
         </ul>
     </div>
@@ -60,7 +59,18 @@
             </select>
         </div>
     </form>
-    <form action="" class="chat-select-form">
+    <form action="">
+        <div class="nomessage-widget">
+            <div class="nomessage">
+                <div class="img-nomes-widget">
+                    <img src="{% static 'nomessage.PNG' %}" alt="" class="nomes">
+                </div>                                                                         <!--IF NO MESSAGE-->
+                <p class="nomes-first">Пока сообщений нет</p>
+                <p class="nomes-second">Здесь будут храниться все отправленные и полученные сообщения</p>
+            </div>
+        </div>
+    </form>
+    <!-- <form action="" class="chat-select-form">
         <div class="chat-message">
             <div class="chat-select-message">
                 <input type="checkbox" class="custom-checkbox" id="all"><label for="all" style="color: rgb(127, 151, 153);">All</label>
@@ -69,12 +79,37 @@
                 <p class="chat-message-p">Пользователь</p>
                 <p class="chat-message-p">Объявление</p>
             </div>
-        </div>
+        </div>                                                                       IF HAS MESSAGE
         <div class="chat">
-            <div class="bg-white">
-                
+            <div class="chat-widget">                     
+                <div class="input-widget">
+                    <input type="checkbox" class="custom-checkbox" id="chat"><label for="chat" style="color: rgb(127, 151, 153);"></label>
+                </div>
+                <div class="star-img-widget">
+                    <button><img src="{% static 'star.PNG' %}" alt="" class="star-img"></button>
+                </div>
+                <div class="arhiv-img-widget">
+                    <button><img src="{% static 'arhiv.PNG' %}" alt="" class="arhiv-img"></button>
+                </div>
+                <div class="chat-username-widget">
+                    <p class="chat-username">HomeOasis</p>
+                </div>
+                <div class="chat-theme-message-widget">
+                    <div class="chat-theme">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, perferendis!</p>
+                    </div>
+                    <div class="chat-last-message">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="chat-date-widget">
+                    <div class="chat-date">
+                        <p>24 february</p>
+                        <p>18:52</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
+    </form> -->
 </div>
 {% endblock %}

@@ -921,12 +921,14 @@ a{
 }
 .messages-li a{
     color: #002f34;
-    background-color: white;
     padding: 13px;
-    border-radius: 15px;
+    transition: .5s;
 }
 .messages-li a:hover{
     border-bottom: #002f34 solid 0.5px;
+    background-color: white;
+    border-radius: 15px;
+    transition: .5s;
 }
 .month{
     display: flex;
@@ -952,6 +954,7 @@ a{
 }
 .chat-message{
     padding: 33px;
+    padding-bottom: 0;
     display: flex;
 }
 .chat-select-message{
@@ -1006,10 +1009,108 @@ a{
     display: flex;
 }
 .chat-message-p{
-    padding: 0 35px 0 55px;
+    padding: 0 18px 0 80px;
     color: rgb(127, 151, 153);
 }
 .chat{
     padding: 27px;
     padding-top: 0;
+}
+.chat-widget{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+}
+.star-img-widget button{
+    border: none;
+    background-color: transparent;
+}
+.star-img-widget button:hover{
+    cursor: pointer;
+}
+.arhiv-img-widget button{
+    border: none;
+    background: transparent;
+}
+.arhiv-img-widget button:hover{
+    cursor: pointer;
+}
+.chat-username-widget{
+    width: 15%;
+    padding-left: 15px;
+}
+.chat-last-message{
+    padding-top: 0;
+}
+.chat-theme{
+    color: #002f34;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.chat-last-message{
+    color: rgb(127, 151, 153);
+}
+.chat-date-widget{
+    padding-left: 26%;
+}
+.chat-date{
+    text-align: end;
+}
+.nomessage-widget{
+    display: flex;
+    justify-content: center;
+}
+.nomessage{
+    text-align: center;
+}
+.nomes-first{
+    color: #002f34;
+    font-size: 21.5px;
+    font-weight: bold;
+}
+.nomes-second{
+    color: rgb(127, 151, 153);
+    font-size: 15.5px;
+    font-weight: bold;
+}
+.favorites-widget{
+    background-color: white;
+    padding: 2% 2% 0 5%;
+}
+.favorites-p{
+    font-size: 32px;
+    font-weight: bold;
+    color: #002f34;
+}
+.favorites-menu{
+    display: flex;
+}
+.li-favorites{
+    list-style-type: none;
+    padding: 2% 2% 1.5% 0;
+}
+.li-favorites a{
+    color: #002f34;
+}
+.li-favorites a:hover{
+    text-shadow: #002f34 1px 0 8px;
+}
+.favorites-nomes-widget{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 13%;
+}
+.favorites-nomes-p-main{
+    font-size: 23px;
+    font-weight: bold;
+    color: #002f34;
+}
+.favorites-nomes-p-second{
+    color: rgb(127, 155, 153);
+    font-size: 15.5px;
+    font-weight: bold;
 }

@@ -13,5 +13,10 @@ urlpatterns = [
     path('authorisation/', views.authorisation, name = 'authorisation'),
     path('addpost/', views.addpost, name = 'addpost'),
     path('favorites/', views.favorites, name = 'favorites'),
-    path('messages/', views.messages, name = 'messages'),
+    path('myaccount/answers/', views.messages, name = 'messages'),
+    path('favorites/search', views.favorites_search, name = 'favorites_search'),
+    path('favorites/lastseen', views.favorites_lastseen, name = 'favorites_lastseen'),
+    path('myaccount/wallet/', views.messages_wallet, name = 'messages_wallet'),
+    path('myaccount/settings/', views.messages_settings, name = 'messages_settings'),
+    path('myaccount/ADs/', views.messages_ads, name = 'messages_ads'),
 ]
