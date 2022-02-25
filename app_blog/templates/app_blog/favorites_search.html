@@ -1,7 +1,47 @@
 {% extends 'base.html' %}
 {% block title %}
+{% load static %}
 Избранные результаты поиска
 {% endblock %}
 {% block content %}
-
+<div class="favorites-widget">
+    <div class="favorites-p">
+        <p>Избранные результаты поиска</p>
+    </div>
+    <ul class="favorites-menu">
+        <li class="li-favorites"><a href="{% url 'favorites' %}">Избранные объявления</a></li>
+        <li class="li-favorites"><a href="{% url 'favorites_search' %}" class="favorites-active">Избранные результаты поиска</a></li>
+        <li class="li-favorites"><a href="{% url 'favorites_lastseen' %}">Недавно просмотренные</a></li>
+    </ul>
+</div>
+<div class="favorites-nomes-widget">
+    <div class="favorites-nomes">
+        <div class="favorites-nomes-img-widget">
+            <img src="{% static 'nofavorites-search.PNG' %}" alt="" class="favorites-nomes-img">
+        </div>
+        <p class="favorites-nomes-p-main">Нет избранных результатов поиска</p>
+        <p class="favorites-nomes-p-second">Вы можете сохранить результаты поиска снизу на странице списка объявлений, а также сверху в блоке поиска</p>
+        <p class="favorites-nomes-p-second">Избранные результаты поиска сохраняются в вашем профиле, после того, как вы вошли в Мои объявления</p>
+    </div>
+</div>
+<!-- <div class="bg-lavender">
+    <div class="center">
+        <div class="favorites-search-widget">
+            <div class="favorites-search">
+                <div class="favorites-search-img-widget">
+                    <img src="{% static 'favorites-search.PNG' %}" alt="" class="favorites-search-img">
+                </div>
+                <p class="search-name">lorem</p>
+            </div>
+            <form action="" class="delete-form">
+                <button class="favorites-delete-search">
+                    <p class="delete-search">Удалить поиск</p>
+                    <div class="favorites-delete-img-widget">
+                        <img src="{% static 'delete.PNG' %}" alt="" class="favorites-delete-img">
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+</div> -->
 {% endblock %}

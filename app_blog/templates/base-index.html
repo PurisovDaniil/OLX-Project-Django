@@ -11,7 +11,9 @@
 <body>
     <div class="navbar">
         <div class="nav-widget-logo">
-            <img src="/app_blog/static/olx.png" class="nav-logo">
+            <button class="nav-widget-btn">
+                <a href="{% url 'index' %}"><img src="/app_blog/static/olx.png" class="nav-logo"></a>
+            </button>
         </div>
         <ul class="menu">
             {% if user.is_authenticated %}

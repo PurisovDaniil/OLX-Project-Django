@@ -18,5 +18,5 @@ urlpatterns = [
     path('favorites/lastseen', views.favorites_lastseen, name = 'favorites_lastseen'),
     path('myaccount/wallet/', views.messages_wallet, name = 'messages_wallet'),
     path('myaccount/settings/', views.messages_settings, name = 'messages_settings'),
-    path('myaccount/ADs/', views.messages_ads, name = 'messages_ads'),
+    path('myaccount/ads/', views.messages_ads, name = 'messages_ads'),
 ]

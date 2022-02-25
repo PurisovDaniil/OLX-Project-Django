@@ -3,5 +3,131 @@
 Недавно просмотренные
 {% endblock %}
 {% block content %}
-
+<div class="favorites-widget">
+    <div class="favorites-p">
+        <p>Недавно просмотренные</p>
+    </div>
+    <ul class="favorites-menu">
+        <li class="li-favorites"><a href="{% url 'favorites' %}">Избранные объявления</a></li>
+        <li class="li-favorites"><a href="{% url 'favorites_search' %}">Избранные результаты поиска</a></li>
+        <li class="li-favorites"><a href="{% url 'favorites_lastseen' %}" class="favorites-active">Недавно просмотренные</a></li>
+    </ul>
+</div>
+<div class="bg-lavender" style="height: 500px;"></div> <!--if no lastseen-->
+<!-- <div class="favorite-card-widget"> if has lastseen
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+    <div class="premium-card">
+        <div class="premium-img-widget">
+            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+        </div>
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+        </div>
+        <div class="premium-date-widget">
+            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+                Потеря девственности
+            </div>
+            <div class="premium-add-to-favorites">
+               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+            </div>
+        </div>
+    </div>
+</div> -->
 {% endblock %}

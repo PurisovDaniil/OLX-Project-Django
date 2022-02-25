@@ -215,6 +215,8 @@ a{
 }
 .nav-logo{
     width: 14%;
+    display: flex;
+    justify-content: start;
 }
 .menu a{
     padding: 10px 0 0 30px;
@@ -907,6 +909,9 @@ a{
     font-weight: bold;
     transition: .3s;
 }
+.mini-li-nav a:hover{
+    text-shadow: #002f34 1px 0 8px;
+}
 .bg-lavender{
     background-color: lavender;
     padding: 20px;
@@ -1097,6 +1102,9 @@ a{
 .li-favorites a:hover{
     text-shadow: #002f34 1px 0 8px;
 }
+.favorites-active{
+    text-shadow: #002f34 1px 0 8px;
+}
 .favorites-nomes-widget{
     display: flex;
     justify-content: center;
@@ -1113,4 +1121,94 @@ a{
     color: rgb(127, 155, 153);
     font-size: 15.5px;
     font-weight: bold;
+}
+.message-active{
+    text-shadow: #002f34 1px 0 8px;
+}
+.all-ads-p{
+    border-bottom: rgb(216, 190, 224) solid 0.3px;
+    padding-bottom: 5px;
+}
+.noads-flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 15%;
+}
+.noads-p-first{
+    color: #002f34;
+    font-size: 23px;
+    font-weight: bold;
+}
+.noads-p-second{
+    color: rgb(127, 151, 153);
+}
+.all-ads-widget{
+    padding-left: 4%;
+}
+.nowallet-widget{
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+.nowallet-p{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(127, 151, 153);
+}
+.favorites-search-widget{
+    background-color: white;
+    display: flex;
+    border-radius: 8px;
+    width: 50%;
+    justify-content: space-between;
+}
+.favorites-search{
+    padding-left: 10%;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.favorites-delete-search{
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.favorites-delete-search:hover{
+    cursor: pointer;
+}
+.favorites-delete-img-widget{
+    padding-left: 5px;
+}
+.delete-search{
+    color: rgb(127, 151, 153);
+}
+.delete-form{
+    display: flex;
+    align-items: center;
+}
+.search-name{
+    font-size: 18px;
+    color: #002f34;
+    font-weight: bold;
+}
+.favorite-card-widget{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6%;
+    margin-left: 4.5%;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.nav-widget-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
 }

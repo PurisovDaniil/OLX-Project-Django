@@ -1,7 +1,54 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Доска объявлений OLX.uz
 {% endblock %}
 {% block content %}
-
+<div class="bg-white">
+    <div class="title-message-widget">
+        <div class="title-message">
+            <p class="title-message-p">Ваши объявления</p>
+        </div>
+        <div class="title-pay-widget">
+            <div class="balance-widget">
+                <div class="balance-widget-spans">
+                    <span style="padding-right: 15px;">Баланс: 0 сум</span>
+                    <span>Доступный баланс: 0 сум</span>
+                </div>
+                <img src="{% static 'balance.PNG' %}" alt="">
+                <div class="balance-widget-btns">
+                    <button class="pay-koshelek" style="margin-right: 15px;">Пополнить кошелёк</button>
+                    <button class="buy-packet">Купить пакет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="learn-more">
+        <a href="">Узнать больше</a>
+    </div>
+    <div class="mini-navbar-message-widget">
+        <ul class="mini-menu">
+            <li class="mini-li-nav"><a href="{% url 'messages_ads' %}" class="message-active">Объявления</a></li>
+            <li class="mini-li-nav"><a href="{% url 'messages' %}">Сообщения</a></li>
+            <li class="mini-li-nav"><a href="{% url 'messages_wallet' %}">Платежи и счёт OLX</a></li>
+            <!-- <li class="mini-li-nav"><a href="{% url 'messages_settings' %}">Настройки</a></li> -->
+        </ul>
+    </div>
+</div>
+<div class="bg-lavender">
+    <div class="all-ads">
+        <div class="all-ads-widget">
+            <p class="all-ads-p">Всего объявлений: 0</p> <!--количество объявлений-->
+        </div>
+        <div class="noads-flex">
+            <div class="noads-widget">
+                <div class="noads-img-widget">
+                    <img src="{% static 'noads-img.PNG' %}" alt="" class="noads-img">
+                </div>
+                <p class="noads-p-first">Пока здесь нет объявлений</p>
+                <p class="noads-p-second">Здесь будут появляться ваши новые объявления</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
