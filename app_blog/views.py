@@ -94,47 +94,17 @@ def messages_settings(request):
 def messages_wallet(request):
     return render(request, 'app_blog/messages_wallet.html')
 
-def packet(request):
-    return render(request, 'app_blog/packet.html')
-
-def app_6(request):
-    return render(request, 'app_blog/app_6.html')
-
-def what_packet(request):
-    return render(request, 'app_blog/what_packet.html')
-
-def validity_packet(request):
-    return render(request, 'app_blog/validity_packet.html')
-
-def accommodation(request):
-    return render(request, 'app_blog/accommodation.html')
-
 def main_help(request):
     return render(request, 'app_blog/help.html')
 
-def profile_settings_ad(request):
-    return render(request, 'app_blog/profile_settings_ad.html')
+def more_myprofile(request):
+    return render(request, 'app_blog/more_myprofile.html')
+
+def more_information(request):
+    return render(request, 'app_blog/more_information.html')
+
+def my_profile_registration(request):
+    return render(request, 'app_blog/my_profile_registration.html')
 
 def profile_settings_all(request):
     return render(request, 'app_blog/profile_settings_all.html')
-
-def profile_settings_ch_pw_mobile(request):
-    return render(request, 'app_blog/profile_settings_ch_pw_mobile.html')
-
-def profile_settings_change_pw(request):
-    return render(request, 'app_blog/profile_settings_change_pw.html')
-
-def profile_settings_change(request):
-    return render(request, 'app_blog/profile_settings_change.html')
-
-def profile_settings_id(request):
-    return render(request, 'app_blog/profile_settings_id.html')
-
-def profile_settings_messages(request):
-    return render(request, 'app_blog/profile_settings_messages.html')
-
-def profile_settings_resume(request):
-    return render(request, 'app_blog/profile_settings_resume.html')
-
-def profile_settings_uvedom(request):
-    return render(request, 'app_blog/profile_settings_uvedom.html')

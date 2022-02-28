@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+{% load static %}
+Мой профиль
+{% endblock %}
+{% block content %}
+<div class="more_profile-widget">
+    <p class="more_profile-p">Мой профиль</p>
+    <p class="more_profile-p-second">Регистрация профиля, Настройки профиля, Технические неполадки</p>
+    <div class="more_profile-widget-center">
+        <div class="more_profile-registration-widget">
+            <p class="reg-p-bold-first">Регистрация профиля</p>
+            <a href="{% url 'myprofileregistration' %}"><p class="reg-p-first">Как зарегистрироваться на OLX?</p></a>
+            <p class="reg-p-first">Как зарегистрироваться на OLX через мобильное приложение?</p>
+            <p class="reg-p-first">Подтверждение(верификация) профиля</p>
+        </div>
+        <div class="more_profile-registration-widget" style="margin-left: 2%;">
+            <a href="">
+                <p class="reg-p-bold-second">Настройки профиля</p>
+                <p class="reg-p-second">Как восстановить/изменить пароль от профиля на OLX</p>
+                <p class="reg-p-second">Как восстановить/изменить пароль от профиля на мобильном устройтстве на OLX</p>
+                <p class="reg-p-second">Необходимость смены пароля</p>
+            </a>
+            <button class="reg-p-btn"><a href="{% url 'profilesettingsall' %}" class="reg-p-btn-a">Показать все статьи</a></button>
+        </div>
+        <div class="more_profile-registration-widget" style="margin-left: 2%;">
+            <a href="">
+                <p class="reg-p-bold">Технические неполадки</p>
+                <p class="reg-p">Что делать при технической неполадке</p>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

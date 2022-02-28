@@ -1,7 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Как зарегистрироваться на OLX?
 {% endblock %}
 {% block content %}
-
+<div class="content-profile-registration">
+    <div class="left-block">
+        <p class="left-block-p">Статьи в этом разделе</p>
+        <a href="" class="profile-active"><p>Как зарегистрироваться на OLX</p></a>
+        <a href="" class="left-block-a"><p>Как зарегистрироваться на OLX через мобильное устройство</p></a>
+        <a href="" class="left-block-a"><p>Подтверждение(верификация) профиля</p></a>
+    </div>
+    <div class="center-block">
+        <p class="center-block-head-p">Как зарегистрироваться на OLX</p>
+        <p class="center-block-p">Для регистрации на OLX через компьютерную версию:</p>
+        <p class="center-block-padding">1. В правом верхнем углу нажмите на кнопку <span style="color: #002f34; font-weight: bold;">"Войти в профиль"</span></p>
+        <p class="center-block-padding">2. После перехода на страницу выбора, нажмите на вкладку <span style="color: #002f34; font-weight: bold;">"Регистрация"</span></p>
+        <p>Либо можете перейти по данной <a href="{% url 'authorisation' %}" class="author-link">ссылке</a> и вам сразу откроется нужная страница</p>
+        <div class="center-block-img-widget">
+            <img src="{% static 'center-block1.PNG' %}" alt="" class="center-block-img-first">
+        </div>
+        <p class="center-block-p">Регистрация по электронной почте:</p>
+        <p class="center-block-padding">1. Укажите личную электронную почту, которую будете использовать для входа в профиль</p>
+        <p class="center-block-padding">2. Напишите пароль, состоящий из 8 цифр, и также состоящий из букв</p>
+        <p class="center-block-padding">3. Нажмите на кнопку "Регистрация"</p>
+        <p class="center-block-padding">За несколько простых действий вы зарегистрировали себе профиль</p>
+        <p class="center-block-p">Для авторизации на OLX вам надо сделать следующие 2 действия:</p>
+        <p class="center-block-padding">1. На главной странице нажмите на кнопку "Войти в профиль"</p>
+        <p class="center-block-padding">2. Выберите вкладку авторизоваться и введите данные, которые вводили при регистрации</p>
+        <p class="center-block-uvedom">! Хотим напомнить - никому не сообщайте свой пароль! Это ваша персональная информация, за ваш профиль ответственность несёте только Вы</p>
+    </div>
+</div>
 {% endblock %}
