@@ -24,14 +24,14 @@
         </div>
     </div>
     <div class="learn-more">
-        <a href="">Узнать больше</a>
+        <a href="{% url 'help' %}">Узнать больше</a>
     </div>
     <div class="mini-navbar-message-widget">
         <ul class="mini-menu">
             <li class="mini-li-nav"><a href="{% url 'messages_ads' %}">Объявления</a></li>
             <li class="mini-li-nav"><a href="{% url 'messages' %}" class="message-active">Сообщения</a></li>
             <li class="mini-li-nav"><a href="{% url 'messages_wallet' %}">Платежи и счёт OLX</a></li>
-            <!-- <li class="mini-li-nav"><a href="{% url 'messages_settings' %}">Настройки</a></li> -->
+            <li class="mini-li-nav"><a href="{% url 'messages_settings' %}">Настройки</a></li>
         </ul>
     </div>
 </div>
