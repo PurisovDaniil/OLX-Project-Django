@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.db.models import Q
 from .forms import RegisterForm
 from django.contrib.auth.models import User
-from .models import Post, Category, Image, Profile, Comment
+from .models import Post, Category, Image, Profile, Comment, Product
 
 # Create your views here.
 
@@ -72,6 +72,16 @@ def authorisation(request):
 
 def addpost(request):
     return render(request, 'app_blog/add_post.html')
+
+def create(request):
+    if request.method == 'POST':
+        product = Product()
+        product.title = request.POST.get('title')
+        product.date = request.POST.get('date')
+        product.description = request.POST.get('description')
+        product.image = request.POST.get('image')
+        product.save()
+    return redirect('index')
 
 def favorites(request):
     return render(request, 'app_blog/favorites.html')

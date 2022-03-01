@@ -7,7 +7,7 @@
 <div class="content-ad">
     <p class="create-ad">Создать объявление</p>
     <div class="ad-name-widget">
-        <form action="" method="POST">
+        <form action="{% url 'create' %}" method="POST">
             {% csrf_token %}
             <p class="ad-name">Опишите в подробностях</p>
             <p class="ad-name-second">Укажите название*</p>
@@ -31,13 +31,13 @@
                 <p class="photo-label-btn">
                     <label for="files" class="photo-label">Добавить фото</label>
                 </p>
-                <input type="file" id="files" style="visibility: hidden;">
+                <input type="file" id="files" style="visibility: hidden;" name="image">
             </div>
             <p class="ad-name-second" style="margin-top: 10%;">Описание*</p>
             <textarea name="description" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
             <p class="ad-name" style="margin-top: 10%;">Контакная информация</p>
             <p class="ad-name-second">Местоположение*</p>
-            <input type="text" class="object-input-widget" placeholder="Название города или индекс" name="sity_title">
+            <input type="text" class="object-input-widget" placeholder="Название города или индекс">
             <p class="ad-name-second">Цена</p>
             <input type="text" class="object-input-widget" placeholder="Цена" name="price">
             <p class="ad-name-second">Контактное лицо</p>
@@ -47,7 +47,7 @@
             <p class="ad-name-second">Номер телефона</p>
             <input type="number" class="object-input-widget" placeholder="Ваш номер телефона">
             <div class="send-widget">
-                <button class="send-btn">Опубликовать</button>
+                <button class="send-btn" type="submit">Опубликовать</button>
             </div>
         </form>
     </div>

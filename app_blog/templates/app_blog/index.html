@@ -44,26 +44,34 @@
 
 <p class="title-premium-card">Премиум объявления</p>
 <div class="premium-card-widget">
+    {% for product in products %}
     <div class="premium-card">
+        {% if product.image.url != null %}
+        <div class="premium-img-widget">
+            <img src="{{product.image.url}}" alt="" class="premium-img">
+        </div>
+        {% else %}
         <div class="premium-img-widget">
             <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
         </div>
+        {% endif %}
         <div class="premium-body-widget">
-            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">iPhone 13 Pro Max</a></p>
+            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">{{product.title}}</a></p>
         </div>
         <div class="premium-date-widget">
-            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+            <p class="premium-date">{{product.description}}</p>
         </div>
         <div class="premium-footer">
             <div class="premium-price">
-                Потеря девственности
+            {{product.price}}
             </div>
             <div class="premium-add-to-favorites">
                <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
             </div>
         </div>
     </div>
-    <div class="premium-card">
+    {% endfor %}
+    <!-- <div class="premium-card">
         <div class="premium-img-widget">
             <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
         </div>
@@ -157,6 +165,6 @@
                <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 {% endblock %}

@@ -79,9 +79,9 @@ class Comment(models.Model):
     def __str__(self):
         return self.user.username
 
-# class Product(models.Model):
-#     title = models.CharField(max_length=255)
-#     photo = models.ImageField(default=False)
-#     sity_title = models.CharField(max_length=255)
-#     price = models.IntegerField(default=False)
-#     description = models.CharField(max_length=455)
+class Product(models.Model):
+    title = models.CharField(max_length=255)
+    price = models.IntegerField(default=False)
+    date = models.DateTimeField(default=timezone.now)
+    description = models.CharField(max_length=455)
+    image = models.ImageField(null=True, blank=True)
