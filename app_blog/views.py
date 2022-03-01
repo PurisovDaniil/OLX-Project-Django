@@ -108,3 +108,9 @@ def my_profile_registration(request):
 
 def profile_settings_all(request):
     return render(request, 'app_blog/profile_settings_all.html')
+
+def mobile_registration(request):
+    return render(request, 'app_blog/my_profile_registration_mobile.html')
+
+def verification(request):
+    return render(request, 'app_blog/my_profile_verification.html')

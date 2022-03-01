@@ -24,5 +24,7 @@ urlpatterns = [
     path('help.olx.uz/my_profile/', views.more_myprofile, name = 'more_myprofile'),
     path('help.olx.uz/information', views.more_information, name = 'more_information'),
     path('help.olx.uz/my_profile/registration', views.my_profile_registration, name = 'myprofileregistration'),
-    path('help.olx.uz/profile_settings', views.profile_settings_all, name = 'profilesettingsall')
+    path('help.olx.uz/profile_settings', views.profile_settings_all, name = 'profilesettingsall'),
+    path('help.olx.uz/my_profile/registration_mobile', views.mobile_registration, name = 'mobileregistration'),
+    path('help.ox.uz/my_profile/verification', views.verification, name = 'verification'),
 ]

@@ -12,29 +12,16 @@ body{
 .logo{
     height: 70px;
 }
-.flex{
-    display: flex;
-}
 .menu{
     display: flex;
-    height: 33px;
-    padding: 8px 0 0 0;
+    padding-top: 8px;
 }
 .menu a{
     color: white;
     text-decoration: none;
     list-style-type: none;
     font-size: large;
-    margin: 0 10px 0 10px;
-}
-.img-card{
-    width: 100px;
-    object-fit: cover;
-    border-radius: 100px;
-}
-.img-card-widget{
-    display: flex;
-    justify-content: center;
+    margin-right: 15px;
 }
 .card{
     width: min-content;
@@ -242,17 +229,6 @@ a{
 .categories{
     background-color: white;
 }
-.card-widget{
-    width: 10%;
-}
-.category-widget{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.body-card{
-    text-align: center;
-}
 .body-card a{
     color: black;
     transition: .3s;
@@ -343,6 +319,10 @@ a{
     color: #002f34;
     font-size: 31px;
     font-weight: bold;
+}
+.card-widget{
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .premium-card-widget{
     display: flex;
@@ -1409,4 +1389,25 @@ a{
 .profile-p-body:hover{
     color: #0b76ef;
     transition: .3s;
+}
+.category-widget{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img-card{
+    width: 100px;
+    border-radius: 100px;
+}
+.body-card{
+    text-align: center;
+    width: 100px;
+}
+.center-block-p-body{
+    width: 80%;
+}
+@media screen and (max-width: 970px){
+    .no-ph{
+        display: none;
+    }
 }

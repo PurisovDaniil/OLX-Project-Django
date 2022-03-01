@@ -21,17 +21,17 @@
         {% for category in categories %}
         <div class="card-widget">
             {% if category.image.url != null %}
-            <div class="img-card-widge">
+            <div class="img-card-widget">
                 <img src="{{category.image.url}}" alt="..." class="img-card">
             </div>
             {% else %}
             <div class="img-card-widget">
-                <img src="/beige_бежевый_aesthetic_эстетика_wallpaper_coffee_кофе_обои_foundalighter.jpg" alt="..." class="img-card">
+                <img src="{% static '1.jpg' %}" alt="" class="img-card">
             </div>
             {% endif %}
             <div class="body-card">
                 <a href="{{category.get_link}}">
-                    <p class="title-card">{{category.title}}</p> 
+                    <p class="title-card">{{category.title}}</p>
                 </a>
             </div>
         </div>

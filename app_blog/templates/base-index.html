@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="nav-widget-logo">
+        <div class="nav-widget-logo no-ph">
             <button class="nav-widget-btn">
                 <a href="{% url 'index' %}"><img src="/app_blog/static/olx.png" class="nav-logo"></a>
             </button>
@@ -28,7 +28,7 @@
                     Выйти из профиля
                 </li>
             </a>
-            <a href="{% url 'addpost' %}">
+            <a href="{% url 'addpost' %}" class="nav-send">
                 <li class="li-nav">Подать объявление</li>
             </a>
             {% else %}
