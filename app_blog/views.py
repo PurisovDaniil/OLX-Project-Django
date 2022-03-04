@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect, reverse
 from django.db.models import Q
 from .forms import RegisterForm
 from django.contrib.auth.models import User
-from .models import Post, Category, Image, Profile, Comment, Product
+from .models import Category, Image, Profile, Product
 
 # Create your views here.
 
 def index(request):
-    news = Post.objects.all
+    products = Product.objects.all
     categories = Category.objects.all()
-    context = {'news': news, 'categories': categories}
+    context = {'products': products, 'categories': categories}
     return render(request, 'app_blog/index.html', context)
 
 def register(request):
@@ -35,24 +35,8 @@ def save_bg(request):
             form.save(request.user)
     return redirect('index')
 
-def user_detail(request, username):
-    user = User.objects.get(username=username)
-    views = user.views_set.order_by('-date')
-    comments = user.comment_set.order_by('-date')
-    context = {'user':user, 'views':views, 'comments':comments}
-    return render(request, 'blog/user_detail.html', context)
-
-
 def post_detail(request):
     return render(request, 'app_blog/post_detail.html')
-
-
-def comment(request, slug):
-    post = Post.objects.get
-    if request.method == 'POST':
-        post.comment_set.create(user = request.user, text = request.POST.get('text'))
-        return redirect(reverse('post_detail_url', kwargs = {'slug':post.slug}))
-    return redirect(reverse('post_detail_url', kwargs = {'slug':post.slug}))
 
 def category_detail(request, slug):
     category = Category.objects.get(slug__exact = slug)

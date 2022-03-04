@@ -45,43 +45,9 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
-class Post(models.Model):
-    title = models.CharField('Заголовок', max_length=150)
-    slug = models.SlugField('Ссылка', max_length=150, unique=True)
-    text = models.TextField('Текст', blank=True, null=True)
-    preview = models.ForeignKey(Image, on_delete=models.SET_NULL, null=True, blank=True, verbose_name = 'Обложка')
-    gallery = models.ManyToManyField(Image, verbose_name='Галлерея', related_name = 'posts')
-    category = models.ManyToManyField(Category, verbose_name = 'Категории', related_name = 'posts')
-    date = models.DateTimeField('Дата', default=timezone.now)
-    views = models.IntegerField('Просмотры', default=0)
-    publish = models.BooleanField('Опубликовано', default = False)
-
-    def get_link(self):
-        return reverse('post_detail_url', kwargs={'slug':self.slug})
-
-    class Meta():
-        verbose_name = 'Пост'
-        verbose_name_plural = 'Посты'
-
-    def __str__(self):
-        return self.title
-
-class Comment(models.Model):
-    user = models.ForeignKey(User, on_delete = models.CASCADE, verbose_name = 'Автор')
-    post = models.ForeignKey(Post, on_delete = models.CASCADE, verbose_name = 'Новость')
-    text = models.TextField('Текст комментария')
-    date = models.DateTimeField('Дата', default=timezone.now)
-
-    class Meta:
-        verbose_name = 'Комментарий'
-        verbose_name_plural = 'Комментарии'
-
-    def __str__(self):
-        return self.user.username
-
 class Product(models.Model):
     title = models.CharField(max_length=255)
     price = models.IntegerField(default=False)
-    date = models.DateTimeField(default=timezone.now)
+    date = models.DateTimeField(default=timezone.now, null=True, blank = True)
     description = models.CharField(max_length=455)
     image = models.ImageField(null=True, blank=True)

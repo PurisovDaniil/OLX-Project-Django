@@ -10,7 +10,6 @@ urlpatterns = [
     path('categories/<slug:slug>', views.category_detail, name = 'category_detail_url'),
     path('profile/', views.profile, name = 'profile_url'),
     path('profile/save_bg/', views.save_bg, name = 'save_bg'),
-    path('users/<str:username>', views.user_detail, name = 'user_detail'),
     path('authorisation/', views.authorisation, name = 'authorisation'),
     path('addpost/', views.addpost, name = 'addpost'),
     path('favorites/', views.favorites, name = 'favorites'),
