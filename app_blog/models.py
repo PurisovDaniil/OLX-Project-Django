@@ -51,3 +51,5 @@ class Product(models.Model):
     date = models.DateTimeField(default=timezone.now, null=True, blank = True)
     description = models.CharField(max_length=455)
     image = models.ImageField(null=True, blank=True)
+    sity_title = models.CharField(max_length=255)
+    category = models.ManyToManyField(Category, verbose_name = 'Категории', related_name = 'posts')

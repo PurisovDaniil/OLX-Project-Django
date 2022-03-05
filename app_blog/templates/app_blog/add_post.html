@@ -11,9 +11,9 @@
             {% csrf_token %}
             <p class="ad-name">Опишите в подробностях</p>
             <p class="ad-name-second">Укажите название*</p>
-            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title">
+            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title" required>
             <p>Выберите категорию*</p>
-            <select name="category" id="" class="category-select">
+            <select id="" class="category-select">
                 <option value="" class="category-select-option">Детский мир</option>
                 <option value="" class="category-select-option">Недвижимость</option>
                 <option value="" class="category-select-option">Транспорт</option>
@@ -37,15 +37,15 @@
             <textarea name="description" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание"></textarea>
             <p class="ad-name" style="margin-top: 10%;">Контакная информация</p>
             <p class="ad-name-second">Местоположение*</p>
-            <input type="text" class="object-input-widget" placeholder="Название города или индекс">
+            <input type="text" class="object-input-widget" placeholder="Название города или индекс" name="sity_title" required>
             <p class="ad-name-second">Цена</p>
-            <input type="text" class="object-input-widget" placeholder="Цена" name="price">
+            <input type="text" class="object-input-widget" placeholder="Цена" name="price" required>
             <p class="ad-name-second">Контактное лицо</p>
-            <input type="text" class="object-input-widget" placeholder="{{user.username}}">
+            <input type="text" class="object-input-widget" placeholder="{{user.username}}" required>
             <p class="ad-name-second">Email-адрес</p>
             <input type="email" class="object-input-widget" placeholder="{{user.email}}">
             <p class="ad-name-second">Номер телефона</p>
-            <input type="number" class="object-input-widget" placeholder="Ваш номер телефона">
+            <input type="number" class="object-input-widget" placeholder="Ваш номер телефона" required>
             <div class="send-widget">
                 <button class="send-btn" type="submit">Опубликовать</button>
             </div>

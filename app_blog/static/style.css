@@ -1406,6 +1406,27 @@ a{
 .center-block-p-body{
     width: 80%;
 }
+.content-developers{
+    margin: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.leader-developer{
+    padding: 25px;
+    display: flex;
+    text-align: center;
+}
+.description-leader p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.description-leader{
+    display: flex;
+    align-items: center;
+}
+.leader-img{
+    border-radius: 30px;
+}
 @media screen and (max-width: 970px){
     .no-ph{
         display: none;

@@ -24,7 +24,7 @@ def register(request):
 
 def search_function(request):
     query = request.GET.get('search_input')
-    posts = Post.objects.filter(Q(title__icontains = query))
+    posts = Product.objects.filter(Q(title__icontains = query))
     context = {'query': query, 'posts': posts}
     return render(request, 'app_blog/search.html', context)
 
@@ -64,6 +64,7 @@ def create(request):
         product.date = request.POST.get('date')
         product.description = request.POST.get('description')
         product.image = request.POST.get('image')
+        product.sity_title = request.POST.get('sity_title')
         product.save()
     return redirect('index')
 
@@ -108,3 +109,6 @@ def mobile_registration(request):
 
 def verification(request):
     return render(request, 'app_blog/my_profile_verification.html')
+
+def developers(request):
+    return render(request, 'app_blog/developers.html')

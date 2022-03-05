@@ -7,7 +7,7 @@
 <div class="post-detail-contact-content">
     <div class="post-detail-photo">
         {% if post.image.url != null %}
-        <img src="{{post.image.url}}" alt="" class="post-photo">
+        <img src="{{product.image.url}}" alt="" class="post-photo">
         {% else %}
         <img src="{% static '1.jpg' %}" alt="" class="post-photo">
         {% endif %}
@@ -20,7 +20,7 @@
                     <img src="{% static 'avatar.PNG' %}" alt="" class="contact-avatar">
                 </div>
                 <div class="contact-number-widget">
-                    <p class="user-number">998 91 396 06 86</p>
+                    <p class="user-number">998 91 333 88 10</p>
                     <a href="" class="all-ads">Все объявления автора</a>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <img src="{% static 'gps-tracker.PNG' %}" alt="" style="width: 50px;">
                 </div>
                 <div style="display: flex; align-items: center; width: 80%;">
-                    <span>Ташкент, Шайхантахурский район</span>
+                    <span>Шайхантахурский район</span>
                 </div>
             </div>
         </div>
@@ -50,13 +50,12 @@
             <button class="favorite-btn"><img src="{% static 'premium-favorite.PNG' %}" alt=""></button>
         </div>
         <div class="post-detail-title-widget">
-            <p class="post-detail-title">iPhone 13 Pro Max</p>
-            <p class="post-price">Потеря девственности</p>
+            <p class="post-detail-title">{{product.title}}</p>
+            <p class="post-price">{{product.price}}</p>
             <p class="post-detail-description">Описание:</p>
-            <p class="post-detail-dsc">Кто посмотрел тот лох</p>
+            <p class="post-detail-dsc">{{product.description}}</p>
             <hr>
             <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                <p class="views-post-detail">Просмотров: 94</p>
                 <p><a href="" class="d-flex" style="align-items: center; color: black;">
                     <img src="{% static 'red-flag.PNG' %}" alt="">Пожаловаться
                 </a></p>
