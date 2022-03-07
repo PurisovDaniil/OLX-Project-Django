@@ -11,9 +11,7 @@
 <body>
     <div class="navbar">
         <div class="nav-widget-logo no-ph">
-            <button class="nav-widget-btn">
-                <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
-            </button>
+            <img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
         </div>
         <ul class="menu">
             {% if user.is_authenticated %}
@@ -51,7 +49,7 @@
     </div>
     {% block content %}
     {% endblock %}
-    <div class="start-business">
+    <div class="start-business no-ph">
         <div class="start-business-widget">
             <div class="up-gologramm">
                 <img src="{% static 'img/up.PNG' %}" alt="">
@@ -64,7 +62,7 @@
             </div>
         </div>
     </div>
-    <div class="about-olx">
+    <div class="about-olx no-ph">
         <div class="about-olx-widget">
             <div class="about-olx-img">
                 <img src="{% static 'img/olx-footer.PNG' %}" alt="">
@@ -79,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div class="types-category">
+    <div class="types-category no-ph">
         <div class="types-category-widget">
             <div class="document-img-widget">
                 <img src="{% static 'img/document.PNG' %}" class="document-img">
@@ -129,11 +127,11 @@
                         Политика конфиденциальности
                     </a>
                 </li>
-                <li class="footer-li" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 17.5px; display: flex;">
-                    Партнёры <img src="{% static 'img/dropdown.PNG' %}" class="footer-img">
+                <li class="footer-li no-ph" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 17.5px; display: flex;">
+                    <span class="no-ph">Партнёры</span> <img src="{% static 'img/dropdown.PNG' %}" class="footer-img no-ph">
                 </li>
             </ul>
-            <ul class="menu" style="display: block;">
+            <ul class="menu-second">
                 <li class="footer-li-second">
                     <a href="">
                         Как продавать и покупать?
@@ -161,7 +159,7 @@
                     <a href="{% url 'developers' %}">О разработчиках этого сайта</a>
                 </li>
             </ul>
-            <div class="footer-widgets">
+            <div class="footer-widgets no-ph">
                 <div class="footer-widgets-flex">
                     <div class="playstore-widget">
                         <button class="playstore-btn">
@@ -170,13 +168,6 @@
                             </a>
                         </button>
                     </div>
-                    <!-- <div class="appstore-widget">
-                        <button class="appstore-btn">
-                            <a href="">
-                                <img src="{% static 'img/appstore.PNG' %}" alt="" class="appstore-img">
-                            </a>
-                        </button>
-                    </div> -->
                 </div>
                 <div class="footer-widgets-description">
                     <p class="footer-widgets-p">
@@ -185,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-flags">
+        <div class="footer-flags no-ph">
             <div class="footer-flags-widget">
                 <div class="bulgaria-widget" style="padding-right: 20px;">
                     <a href="">

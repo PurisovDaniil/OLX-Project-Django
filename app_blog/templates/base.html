@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="nav-widget-logo">
+        <div class="nav-widget-logo no-ph">
             <button class="nav-widget-btn">
                 <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
             </button>
@@ -89,11 +89,11 @@
                         Политика конфиденциальности
                     </a>
                 </li>
-                <li class="footer-li" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 17.5px; display: flex;">
-                    Партнёры <img src="{% static 'dropdown.PNG' %}" class="footer-img">
+                <li class="footer-li no-ph" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 17.5px; display: flex;">
+                    <span class="no-ph">Партнёры</span><img src="{% static 'img/dropdown.PNG' %}" class="footer-img no-ph">
                 </li>
             </ul>
-            <ul class="menu" style="display: block;">
+            <ul class="menu-second">
                 <li class="footer-li-second">
                     <a href="">
                         Как продавать и покупать?
@@ -121,7 +121,7 @@
                     <a href="">Обратная связь</a>
                 </li>
             </ul>
-            <div class="footer-widgets">
+            <div class="footer-widgets no-ph">
                 <div class="footer-widgets-flex">
                     <div class="playstore-widget">
                         <button class="playstore-btn">
@@ -145,7 +145,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-flags">
+        <div class="footer-flags no-ph">
             <div class="footer-flags-widget">
                 <div class="bulgaria-widget" style="padding-right: 20px;">
                     <a href="">

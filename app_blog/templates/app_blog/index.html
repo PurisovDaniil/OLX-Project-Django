@@ -6,9 +6,9 @@
 {% block content %}
 <div class="content">
     <div class="search-first">
-        <img src="{% static 'img/search.PNG' %}" alt="">
-        <form action="{% url 'search_url' %}" method="GET" class="d-flex">
-            <input type="search" placeholder="... объявлений рядом" class="input-search-first" name="search_input">
+        <img src="{% static 'img/search.PNG' %}" alt="" class="no-ph">
+        <form action="{% url 'search_url' %}" method="GET" class="search-first-form">
+            <input type="search" placeholder="Поиск объявлений" class="input-search-first" name="search_input">
             <button class="btn-search">Поиск</button>
         </form>
     </div>
@@ -21,19 +21,19 @@
         {% for category in categories %}
         <div class="card-widget">
             {% if category.image.url != null %}
-            <div class="img-card-widget">
-                <img src="{{category.image.url}}" alt="..." class="img-card">
-            </div>
-            {% else %}
-            <div class="img-card-widget">
-                <img src="{% static 'img/1.jpg' %}" alt="" class="img-card">
-            </div>
-            {% endif %}
-            <div class="body-card">
-                <a href="{{category.get_link}}">
+            <a href="{{category.get_link}}" class="category-get">
+                <div class="img-card-widget">
+                    <img src="{{category.image.url}}" alt="..." class="img-card">
+                </div>
+                {% else %}
+                <div class="img-card-widget">
+                    <img src="{% static 'img/1.jpg' %}" alt="" class="img-card">
+                </div>
+                {% endif %}
+                <div class="body-card">
                     <p class="title-card">{{category.title}}</p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
         {% endfor %}
     </div>
@@ -42,13 +42,13 @@
     <p>Здесь должна быть реклама, но мне, к сожалению, за неё не платили</p>
 </div>
 
-<p class="title-premium-card">Премиум объявления</p>
+<p class="title-premium-card">Торговая площадка</p>
 <div class="premium-card-widget">
     {% for product in products %}
     <div class="premium-card">
         {% if product.image.url != null %}
         <div class="premium-img-widget">
-            <img src="{{product.image.url}}" alt="" class="premium-img">
+            <img src="{{product.image.url}}" alt="..." class="premium-img">
         </div>
         {% else %}
         <div class="premium-img-widget">
@@ -66,7 +66,7 @@
             {{product.price}}
             </div>
             <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
+               <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
             </div>
         </div>
     </div>

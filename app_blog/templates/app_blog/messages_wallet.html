@@ -4,7 +4,7 @@
 Мой профиль OLX.uz
 {% endblock %}
 {% block content %}
-<div class="bg-white">
+<div class="title-message-head">
     <div class="title-message-widget">
         <div class="title-message">
             <p class="title-message-p">Платежи и счёт OLX</p>
@@ -15,15 +15,12 @@
                     <span style="padding-right: 15px;">Баланс: 0 сум</span>
                     <span>Для рекламы объявлений: 0 бонусов</span>
                 </div>
-                <img src="{% static 'img/balance.PNG' %}" alt="">
+                <img src="{% static 'img/balance.PNG' %}" class="no-ph">
                 <div class="balance-widget-btns">
                     <button class="pay-koshelek" style="margin-right: 15px;">Пополнить счёт</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="learn-more">
-        <a href="">Узнать больше</a>
     </div>
     <div class="mini-navbar-message-widget">
         <ul class="mini-menu">
@@ -34,10 +31,8 @@
         </ul>
     </div>
 </div>
-<div class="bg-lavender">
-    <div class="nowallet-widget">
-        <p class="nowallet-p">Здесь вы найдете сведения обо всех платёжных операциях, произведенных для продвижения ваших объявлений.</p>
-        <p class="nowallet-p">Также вы можете посмотреть остаток средств(баланс) на вашем счету.</p>
-    </div>
+<div class="nowallet-widget">
+    <p class="nowallet-p">Здесь вы найдете сведения обо всех платёжных операциях, произведенных для продвижения ваших объявлений.</p>
+    <p class="nowallet-p">Также вы можете посмотреть остаток средств(баланс) на вашем счету.</p>
 </div>
 {% endblock %}

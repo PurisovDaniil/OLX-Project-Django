@@ -14,7 +14,13 @@ body{
 }
 .menu{
     display: flex;
-    padding-top: 8px;
+    /* padding-top: 8px; */
+}
+.category-get:hover{
+    color: blue;
+}
+.category-get{
+    color: #002f34;
 }
 .menu a{
     color: white;
@@ -143,7 +149,7 @@ a{
     border-radius: 15px;
 }
 .head-register-a{
-    padding: 30px 20px 30px 20px;
+    padding: 6%;
     transition: .4s;
 }
 .head-register-a:hover{
@@ -157,7 +163,7 @@ a{
     transition: .4s;
 }
 .head-register-second-a{
-    padding: 30px 20px 30px 20px;
+    padding: 6%;
     transition: .4s;
 }
 .login-form input{
@@ -287,6 +293,7 @@ a{
     outline: none;
     padding: 13px;
     background-color: lavender;
+    resize: none;
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -466,7 +473,6 @@ a{
 .footer-li-second a:hover{
     text-shadow: #002f34 2px 0 10px;
     transition: .6s;
-    text-decoration: underline #002f34;
 }
 .footer-li a{
     color: black;
@@ -655,7 +661,7 @@ a{
 }
 .post-detail-photo{
     background-color: white;
-    padding: 30px 20px 30px 20px;
+    padding: 2%;
     display: flex;
     justify-content: center;
 }
@@ -663,6 +669,10 @@ a{
     display: flex;
     justify-content: space-evenly;
     margin: 5% 0 5% 0;
+}
+.contact-number-widget{
+    display: flex;
+    align-items: center;
 }
 .contact-widget{
     background-color: white;
@@ -756,11 +766,16 @@ a{
 }
 .message-description-widget{
     background-color: white;
-    width: 895px;
+    width: 73.2%;
     margin-top: 5%;
 }
 .author-description{
     padding: 15px;
+}
+.author-description-widget{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
 }
 .message-send{
     margin: 3% 4% 0 2%;
@@ -860,22 +875,6 @@ a{
     padding: 10px;
     transition: .3s;
 }
-.learn-more{
-    display: flex;
-    justify-content: end;
-    font-size: 18px;
-}
-.learn-more a{
-    color: #002f34;
-    border-bottom: #002f34 solid 2px;
-    font-size: 15px;
-    transition: .3s;
-}
-.learn-more a:hover{
-    color: blueviolet;
-    border-color: blueviolet;
-    transition: .3s;
-}
 .mini-menu{
     display: flex;
 }
@@ -897,16 +896,19 @@ a{
     padding: 20px;
     width: 97%;
 }
+.messages-head{
+    padding: 20px;
+    background-color: lavender;
+}
 .messages-li{
     list-style-type: none;
-    padding: 15px 35px 15px 0;
 }
 .messages{
     display: flex;
 }
 .messages-li a{
     color: #002f34;
-    padding: 13px;
+    padding: 15px;
     transition: .5s;
 }
 .messages-li a:hover{
@@ -936,11 +938,6 @@ a{
 .select-mes{
     color: rgb(127, 151, 153);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.chat-message{
-    padding: 33px;
-    padding-bottom: 0;
-    display: flex;
 }
 .chat-select-message{
     display: flex;
@@ -990,16 +987,8 @@ a{
 .custom-checkbox:disabled+label::before {
     background-color: #e9ecef;
 }
-.chat-message-widget{
-    display: flex;
-}
-.chat-message-p{
-    padding: 0 18px 0 80px;
-    color: rgb(127, 151, 153);
-}
 .chat{
     padding: 27px;
-    padding-top: 0;
 }
 .chat-widget{
     display: flex;
@@ -1008,23 +997,9 @@ a{
     padding-top: 0;
     padding-bottom: 0;
     align-items: center;
-}
-.star-img-widget button{
-    border: none;
-    background-color: transparent;
-}
-.star-img-widget button:hover{
-    cursor: pointer;
-}
-.arhiv-img-widget button{
-    border: none;
-    background: transparent;
-}
-.arhiv-img-widget button:hover{
-    cursor: pointer;
+    justify-content: space-between;
 }
 .chat-username-widget{
-    width: 15%;
     padding-left: 15px;
 }
 .chat-last-message{
@@ -1183,6 +1158,11 @@ a{
     flex-wrap: wrap;
     width: 90%;
 }
+.message-ads-widget{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -1191,6 +1171,9 @@ a{
     border: none;
     outline: none;
     background-color: transparent;
+}
+.nav-widget-logo{
+    width: 40%;
 }
 .help-card-widget{
     display: flex;
@@ -1427,6 +1410,14 @@ a{
 .leader-img{
     border-radius: 30px;
 }
+.leader-img{
+    width: 230px;
+    border-radius: 30px;
+}
+.stepasha-img{
+    width: 220px;
+    border-radius: 30px;
+}
 .no-lastseen{
     text-align: center;
     margin-top: 10%;
@@ -1435,8 +1426,146 @@ a{
     font-weight: bold;
     font-size: large;
 }
+.search-first-form{
+    display: flex;
+}
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.author-phone{
+    font-weight: bold;
+    font-size: 20px;
+}
+.author-phone-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-message-head{
+    background-color: white;
+    padding: 20px;
+}
 @media screen and (max-width: 970px){
     .no-ph{
         display: none;
+    }
+    .footer-content{
+        display: block;
+    }
+    .footer-menu{
+        text-align: center;
+    }
+    .menu-second{
+        text-align: center;
+    }
+    .search-first-form{
+        display: block;
+    }
+    .input-search-first{
+        height: 100%;
+    }
+    .btn-search{
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        margin-left: 30%;
+    }
+    .menu{
+        display: block;
+        text-align: center;
+    }
+    .input-search-first::placeholder{
+        text-align: center;
+    }
+    .favorites-menu{
+        display: block;
+        text-align: center;
+    }
+    .li-favorites{
+        padding-bottom: 15px;
+    }
+    .favorites-p{
+        text-align: center;
+    }
+    .author-widget{
+        width: 90%;
+    }
+    .head-register{
+        text-align: center;
+    }
+    .post-detail-contact-content{
+        display: block;
+    }
+    .post-detail-photo{
+        width: 90%;
+        margin-left: 3%;
+        margin-bottom: 5%;
+    }
+    .post-photo{
+        width: 100%;
+    }
+    .author-description-widget{
+        display: block;
+    }
+    .message-description-widget{
+        width: 100%;
+    }
+    .message-send-btn-widget{
+        display: flex;
+        justify-content: center;
+    }
+    .post-description-widget{
+        width: 94%;
+        margin-bottom: 20%;
+    }
+    .post-description{
+        width: 89.5%;
+    }
+    .gps-widget{
+        width: 84%;
+        margin-left: 3%;
+    }
+    .title-message-widget{
+        display: block;
+        width: 100%;
+    }
+    .mini-menu{
+        display: block;
+        text-align: center;
+    }
+    .messages-widget{
+        display: block;
+    }
+    .messages{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .month{
+        display: flex;
+        justify-content: center;
+    }
+    .chat-widget{
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+    .chat-username-widget{
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+    .select-message-form{
+        display: flex;
+        justify-content: center;
+    }
+    .photo-label-btn{
+        padding: 10% 25% 10% 25%;
+        text-align: center;
+    }
+    .description-widget{
+        width: 89%;
     }
 }

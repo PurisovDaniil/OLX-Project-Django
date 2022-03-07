@@ -12,8 +12,8 @@
         <img src="{% static 'img/1.jpg' %}" alt="" class="post-photo">
         {% endif %}
     </div>
-    <div class="d-block">
-        <div class="contact-widget">
+    <div>
+        <div class="contact-widget no-ph">
             <p class="p-username">Пользователь:</p>
             <div class="contact">
                 <div class="contact-avatar-widget">
@@ -21,12 +21,6 @@
                 </div>
                 <div class="contact-number-widget">
                     <p class="user-number">998 91 333 88 10</p>
-                    <a href="" class="all-ads">Все объявления автора</a>
-                </div>
-            </div>
-            <div class="contact-btns">
-                <div class="contact-btn-number-widget">
-                    <button class="contact-btn-number">Написать сообщение</button>
                 </div>
             </div>
         </div>
@@ -65,14 +59,14 @@
     <div class="message-description-widget">
         <form action="" method="">
             <div class="author-description">
-                <div class="d-flex" style="align-items: center; justify-content: space-between;">
-                    <div class="d-flex" style="align-items: center;">
+                <div class="author-description-widget">
+                    <div class="author">
                         <img src="{% static 'img/avatar.PNG' %}" alt="">
                         <p>Kakoy ta Boburbek</p>
                     </div>
-                    <div class="d-flex" style="align-items: center;">
+                    <div class="author-phone-widget">
                         <img src="{% static 'img/call.PNG' %}" alt="">
-                        <p style="font-weight: bold; font-size: 20px;">+998 97 923 56 66</p>
+                        <p class="author-phone">+998 97 923 56 66</p>
                     </div>
                 </div>
                 <div class="message-send">

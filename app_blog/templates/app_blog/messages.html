@@ -4,7 +4,7 @@
 Доска объявлений OLX.uz
 {% endblock %}
 {% block content %}
-<div class="bg-white">
+<div class="title-message-head">
     <div class="title-message-widget">
         <div class="title-message">
             <p class="title-message-p">Сообщения</p>
@@ -15,16 +15,13 @@
                     <span style="padding-right: 15px;">Баланс: 0 сум</span>
                     <span>Доступный баланс: 0 сум</span>
                 </div>
-                <img src="{% static 'img/balance.PNG' %}" alt="">
+                <img src="{% static 'img/balance.PNG' %}" alt="" class="no-ph">
                 <div class="balance-widget-btns">
                     <button class="pay-koshelek" style="margin-right: 15px;">Пополнить кошелёк</button>
                     <button class="buy-packet">Купить пакет</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="learn-more">
-        <a href="{% url 'main_help' %}">Узнать больше</a>
     </div>
     <div class="mini-navbar-message-widget">
         <ul class="mini-menu">
@@ -35,7 +32,7 @@
         </ul>
     </div>
 </div>
-<div class="bg-lavender">
+<div class="messages-head">
     <div class="messages-widget">
         <ul class="messages">
             <li class="messages-li"><a href="">Недавние</a></li>
@@ -59,57 +56,35 @@
             </select>
         </div>
     </form>
-    <form action="">
-        <div class="nomessage-widget">
-            <div class="nomessage">
-                <div class="img-nomes-widget">
-                    <img src="{% static 'img/nomessage.PNG' %}" alt="" class="nomes">
-                </div>                                                                         <!--IF NO MESSAGE-->
-                <p class="nomes-first">Пока сообщений нет</p>
-                <p class="nomes-second">Здесь будут храниться все отправленные и полученные сообщения</p>
+    <div class="nomessage-widget">
+        <div class="nomessage">
+            <div class="img-nomes-widget">
+                <img src="{% static 'img/nomessage.PNG' %}" alt="" class="nomes">
             </div>
+            <p class="nomes-first">Пока сообщений нет</p>
+            <p class="nomes-second">Здесь будут храниться все отправленные и полученные сообщения</p>
         </div>
-    </form>
-    <!-- <form action="" class="chat-select-form">
-        <div class="chat-message">
-            <div class="chat-select-message">
-                <input type="checkbox" class="custom-checkbox" id="all"><label for="all" style="color: rgb(127, 151, 153);">All</label>
+    </div>
+    <!-- <div class="chat">
+        <div class="chat-widget">                     
+            <div class="chat-username-widget">
+                <p class="chat-username">HomeOasis</p>
             </div>
-            <div class="chat-message-widget">
-                <p class="chat-message-p">Пользователь</p>
-                <p class="chat-message-p">Объявление</p>
+            <div class="chat-theme-message-widget">
+                <div class="chat-theme">
+                    <p>Тема беседы</p>
+                </div>
+                <div class="chat-last-message">
+                    <p>Последнее сообщение из беседы</p>
+                </div>
             </div>
-        </div>                                                                       IF HAS MESSAGE
-        <div class="chat">
-            <div class="chat-widget">                     
-                <div class="input-widget">
-                    <input type="checkbox" class="custom-checkbox" id="chat"><label for="chat" style="color: rgb(127, 151, 153);"></label>
-                </div>
-                <div class="star-img-widget">
-                    <button><img src="{% static 'img/star.PNG' %}" alt="" class="star-img"></button>
-                </div>
-                <div class="arhiv-img-widget">
-                    <button><img src="{% static 'img/arhiv.PNG' %}" alt="" class="arhiv-img"></button>
-                </div>
-                <div class="chat-username-widget">
-                    <p class="chat-username">HomeOasis</p>
-                </div>
-                <div class="chat-theme-message-widget">
-                    <div class="chat-theme">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, perferendis!</p>
-                    </div>
-                    <div class="chat-last-message">
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-                <div class="chat-date-widget">
-                    <div class="chat-date">
-                        <p>24 february</p>
-                        <p>18:52</p>
-                    </div>
+            <div class="chat-date-widget">
+                <div class="chat-date">
+                    <p>24 february</p>
+                    <p>18:52</p>
                 </div>
             </div>
         </div>
-    </form> -->
+    </div> -->
 </div>
 {% endblock %}
