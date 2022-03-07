@@ -1427,6 +1427,14 @@ a{
 .leader-img{
     border-radius: 30px;
 }
+.no-lastseen{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: rgb(127, 170, 153);
+    font-weight: bold;
+    font-size: large;
+}
 @media screen and (max-width: 970px){
     .no-ph{
         display: none;

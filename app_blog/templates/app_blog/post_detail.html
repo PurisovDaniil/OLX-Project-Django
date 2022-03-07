@@ -9,7 +9,7 @@
         {% if post.image.url != null %}
         <img src="{{product.image.url}}" alt="" class="post-photo">
         {% else %}
-        <img src="{% static '1.jpg' %}" alt="" class="post-photo">
+        <img src="{% static 'img/1.jpg' %}" alt="" class="post-photo">
         {% endif %}
     </div>
     <div class="d-block">
@@ -17,7 +17,7 @@
             <p class="p-username">Пользователь:</p>
             <div class="contact">
                 <div class="contact-avatar-widget">
-                    <img src="{% static 'avatar.PNG' %}" alt="" class="contact-avatar">
+                    <img src="{% static 'img/avatar.PNG' %}" alt="" class="contact-avatar">
                 </div>
                 <div class="contact-number-widget">
                     <p class="user-number">998 91 333 88 10</p>
@@ -34,7 +34,7 @@
             <p class="gps-p">Местоположение:</p>
             <div class="d-flex">
                 <div>
-                    <img src="{% static 'gps-tracker.PNG' %}" alt="" style="width: 50px;">
+                    <img src="{% static 'img/gps-tracker.PNG' %}" alt="" style="width: 50px;">
                 </div>
                 <div style="display: flex; align-items: center; width: 80%;">
                     <span>Шайхантахурский район</span>
@@ -47,7 +47,7 @@
     <div class="post-description">
         <div class="d-flex" style="justify-content: space-between;">
             <p>Опубликовано: 20 февраля 2022 г.</p>
-            <button class="favorite-btn"><img src="{% static 'premium-favorite.PNG' %}" alt=""></button>
+            <button class="favorite-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button>
         </div>
         <div class="post-detail-title-widget">
             <p class="post-detail-title">{{product.title}}</p>
@@ -57,7 +57,7 @@
             <hr>
             <div class="d-flex" style="justify-content: space-between; align-items: center;">
                 <p><a href="" class="d-flex" style="align-items: center; color: black;">
-                    <img src="{% static 'red-flag.PNG' %}" alt="">Пожаловаться
+                    <img src="{% static 'img/red-flag.PNG' %}" alt="">Пожаловаться
                 </a></p>
             </div>
         </div>
@@ -67,11 +67,11 @@
             <div class="author-description">
                 <div class="d-flex" style="align-items: center; justify-content: space-between;">
                     <div class="d-flex" style="align-items: center;">
-                        <img src="{% static 'avatar.PNG' %}" alt="">
+                        <img src="{% static 'img/avatar.PNG' %}" alt="">
                         <p>Kakoy ta Boburbek</p>
                     </div>
                     <div class="d-flex" style="align-items: center;">
-                        <img src="{% static 'call.PNG' %}" alt="">
+                        <img src="{% static 'img/call.PNG' %}" alt="">
                         <p style="font-weight: bold; font-size: 20px;">+998 97 923 56 66</p>
                     </div>
                 </div>

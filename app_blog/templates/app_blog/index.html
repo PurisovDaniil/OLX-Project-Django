@@ -6,7 +6,7 @@
 {% block content %}
 <div class="content">
     <div class="search-first">
-        <img src="{% static 'search.PNG' %}" alt="">
+        <img src="{% static 'img/search.PNG' %}" alt="">
         <form action="{% url 'search_url' %}" method="GET" class="d-flex">
             <input type="search" placeholder="... объявлений рядом" class="input-search-first" name="search_input">
             <button class="btn-search">Поиск</button>
@@ -26,7 +26,7 @@
             </div>
             {% else %}
             <div class="img-card-widget">
-                <img src="{% static '1.jpg' %}" alt="" class="img-card">
+                <img src="{% static 'img/1.jpg' %}" alt="" class="img-card">
             </div>
             {% endif %}
             <div class="body-card">
@@ -52,7 +52,7 @@
         </div>
         {% else %}
         <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
+            <img src="{% static 'img/1.jpg' %}" alt="" class="premium-img">
         </div>
         {% endif %}
         <div class="premium-body-widget">

@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="navbar">
         <div class="nav-widget-logo no-ph">
             <button class="nav-widget-btn">
-                <a href="{% url 'index' %}"><img src="/app_blog/static/olx.png" class="nav-logo"></a>
+                <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
             </button>
         </div>
         <ul class="menu">
@@ -54,7 +54,7 @@
     <div class="start-business">
         <div class="start-business-widget">
             <div class="up-gologramm">
-                <img src="{% static 'up.PNG' %}" alt="">
+                <img src="{% static 'img/up.PNG' %}" alt="">
             </div>
             <div class="text">
                 <p>Начните бизнес в интернете с OLX!</p>
@@ -67,7 +67,7 @@
     <div class="about-olx">
         <div class="about-olx-widget">
             <div class="about-olx-img">
-                <img src="{% static 'olx-footer.PNG' %}" alt="">
+                <img src="{% static 'img/olx-footer.PNG' %}" alt="">
             </div>
             <div class="about-olx-content">
                 <p class="about-olx-p-first">Сервис объявлений №1 в Узбекистане</p>
@@ -82,7 +82,7 @@
     <div class="types-category">
         <div class="types-category-widget">
             <div class="document-img-widget">
-                <img src="{% static 'document.PNG' %}" class="document-img">
+                <img src="{% static 'img/document.PNG' %}" class="document-img">
             </div>
             <div class="types-category-content">
                 <p class="text-bold">Разделы на сервисе OLX: </p>
@@ -130,7 +130,7 @@
                     </a>
                 </li>
                 <li class="footer-li" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 17.5px; display: flex;">
-                    Партнёры <img src="{% static 'dropdown.PNG' %}" class="footer-img">
+                    Партнёры <img src="{% static 'img/dropdown.PNG' %}" class="footer-img">
                 </li>
             </ul>
             <ul class="menu" style="display: block;">
@@ -166,17 +166,17 @@
                     <div class="playstore-widget">
                         <button class="playstore-btn">
                             <a href="">
-                                <img src="{% static 'playstore.PNG' %}" alt="" class="playstore-img">
+                                <img src="{% static 'img/playstore.PNG' %}" alt="" class="playstore-img">
                             </a>
                         </button>
                     </div>
-                    <div class="appstore-widget">
+                    <!-- <div class="appstore-widget">
                         <button class="appstore-btn">
                             <a href="">
-                                <img src="{% static 'appstore.PNG' %}" alt="" class="appstore-img">
+                                <img src="{% static 'img/appstore.PNG' %}" alt="" class="appstore-img">
                             </a>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="footer-widgets-description">
                     <p class="footer-widgets-p">
@@ -189,25 +189,25 @@
             <div class="footer-flags-widget">
                 <div class="bulgaria-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'bulgaria.PNG' %}" alt="" class="bulgaria-img">
+                        <img src="{% static 'img/bulgaria.PNG' %}" alt="" class="bulgaria-img">
                         OLX.bg
                     </a>
                 </div>
                 <div class="polska-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'polska.png' %}" alt="" class="polska-img">
+                        <img src="{% static 'img/polska.png' %}" alt="" class="polska-img">
                         OLX.pl
                     </a>
                 </div>
                 <div class="romania-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'romania.png' %}" alt="" class="romania-img">
+                        <img src="{% static 'img/romania.png' %}" alt="" class="romania-img">
                         OLX.ro
                     </a>
                 </div>
                 <div class="ukraine-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'ukraine.png' %}" alt="" class="ukraine-img">
+                        <img src="{% static 'img/ukraine.png' %}" alt="" class="ukraine-img">
                         OLX.ua
                     </a>
                 </div>

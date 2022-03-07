@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="navbar">
         <div class="nav-widget-logo">
             <button class="nav-widget-btn">
-                <a href="{% url 'index' %}"><img src="/app_blog/static/olx.png" class="nav-logo"></a>
+                <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
             </button>
         </div>
         <ul class="menu">
@@ -126,14 +126,14 @@
                     <div class="playstore-widget">
                         <button class="playstore-btn">
                             <a href="">
-                                <img src="{% static 'playstore.PNG' %}" alt="" class="playstore-img">
+                                <img src="{% static 'img/playstore.PNG' %}" alt="" class="playstore-img">
                             </a>
                         </button>
                     </div>
                     <!-- <div class="appstore-widget">
                         <button class="appstore-btn">
                             <a href="">
-                                <img src="{% static 'appstore.PNG' %}" alt="" class="appstore-img">
+                                <img src="{% static 'img/appstore.PNG' %}" alt="" class="appstore-img">
                             </a>
                         </button>
                     </div> -->
@@ -149,25 +149,25 @@
             <div class="footer-flags-widget">
                 <div class="bulgaria-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'bulgaria.PNG' %}" alt="" class="bulgaria-img">
+                        <img src="{% static 'img/bulgaria.PNG' %}" alt="" class="bulgaria-img">
                         OLX.bg
                     </a>
                 </div>
                 <div class="polska-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'polska.png' %}" alt="" class="polska-img">
+                        <img src="{% static 'img/polska.png' %}" alt="" class="polska-img">
                         OLX.pl
                     </a>
                 </div>
                 <div class="romania-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'romania.png' %}" alt="" class="romania-img">
+                        <img src="{% static 'img/romania.png' %}" alt="" class="romania-img">
                         OLX.ro
                     </a>
                 </div>
                 <div class="ukraine-widget" style="padding-right: 20px;">
                     <a href="">
-                        <img src="{% static 'ukraine.png' %}" alt="" class="ukraine-img">
+                        <img src="{% static 'img/ukraine.png' %}" alt="" class="ukraine-img">
                         OLX.ua
                     </a>
                 </div>
