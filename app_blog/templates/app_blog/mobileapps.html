@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Объявления вашего города всегда под рукой OLX uz
+{% endblock %}
+{% block content %}
+<div class="mobileapps-widget">
+    <div class="mobileapps-desc-flex">
+        <div class="mobileapps-desc">
+            <p class="title-mobileapps">Возьмите OLX с собой</p>
+            <div class="mobileapps-desc-widget">
+                <div class="mobilesuccess-widget">
+                    <img src="{% static 'img/mobilesuccess.png' %}" alt="" class="mobilesuccess"><span>Используйте удобное бесплатное приложение для смартфона</span>
+                </div>
+                <div class="mobilesuccess-widget">
+                    <img src="{% static 'img/mobilesuccess.png' %}" alt="" class="mobilesuccess"><span>Создавайте и публикуйте объявления за минуты</span>
+                </div>
+                <div class="mobilesuccess-widget">
+                    <img src="{% static 'img/mobilesuccess.png' %}" alt="" class="mobilesuccess"><span>Ищите объявления и обращайтесь откуда угодно</span>
+                </div>
+            </div>
+        </div>
+        <div class="mobileapps-desc-second">
+            <img src="{% static 'img/mobileapps.png' %}" alt="" class="mobileapps-img">
+        </div>
+    </div>
+</div>
+<div class="mobileapps-white">
+    <p class="white-p">Продавайте товары быстрее с нашим приложением</p>
+    <div class="mobileapps-white-flex">
+        <div class="mobileapps-white-card">
+            <div class="mobapps-white-img">
+                <img src="{% static 'img/document-mobile.png' %}" alt="">
+            </div>
+            <p class="title-white">Публикуйте ваши объявления</p>
+            <p>Чем больше деталей, тем лучше. Напишите яркий заголовок и описание, выберите категорию и добавьте фото.</p>
+        </div>
+        <div class="mobileapps-white-card" style="margin-left: 1%; padding-top: 5%;">
+            <div class="mobapps-white-img">
+                <img src="{% static 'img/mobilephoto.png' %}" alt="">
+            </div>
+            <p class="title-white">Делайте фотографии</p>
+            <p>Используйте для этого приложение OLX. Сфотографируйте товар и сразу добавьте его фото в объявление</p>
+        </div>
+        <div class="mobileapps-white-card" style="margin-left: 1%;">
+            <div class="mobapps-white-img">
+                <img src="{% static 'img/mobile.png' %}" alt="">
+            </div>
+            <p class="title-white">Отвечайте моментально</p>
+            <p>Быстрые ответы помогают совершить сделки. Получайте уведомления, как только покупатель отправил вам сообщение</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

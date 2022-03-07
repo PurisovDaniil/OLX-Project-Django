@@ -112,3 +112,6 @@ def verification(request):
 
 def developers(request):
     return render(request, 'app_blog/developers.html')
+
+def mobileapps(request):
+    return render(request, 'app_blog/mobileapps.html')

@@ -28,4 +28,5 @@ urlpatterns = [
     path('help.ox.uz/my_profile/verification', views.verification, name = 'verification'),
     path('create', views.create, name = 'create'),
     path('developers', views.developers, name = 'developers'),
+    path('mobileapps/', views.mobileapps, name = 'mobileapps'),
 ]

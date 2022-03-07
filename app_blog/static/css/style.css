@@ -9,9 +9,6 @@ body{
     color: white;
     z-index: 999;
 }
-.logo{
-    height: 70px;
-}
 .menu{
     display: flex;
     /* padding-top: 8px; */
@@ -29,66 +26,18 @@ body{
     font-size: large;
     margin-right: 15px;
 }
-.card{
-    width: min-content;
-}
 .search-first{
     display: flex;
     margin-top: 40px;
 }
-.search-img{
-    width: 50px;
-    height: 46px;
-}
 .d-flex{
     display: flex;
-}
-.send-ad-widget{
-    background-color: white;
 }
 .li:hover{
     color: gray;
 }
 .img-li-ico:hover{
     color: gray;    
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    width: 190px;
-    left: 0;
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    display: block;
-    background-color: white;
-    list-style-type: none;
-}
-.dropdown-content a:hover{
-    color: blue;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropbtn{
-    background-color: transparent;
-    color: white;
-    border: none;
-    list-style-type: none;
-    font-size: 18px;
-}
-.dropbtn:hover{
-    transition: .6s;
-    cursor: pointer;
-}
-.dropdown{
-    position: relative;
-    display: inline-block;
-    margin-left: 20px;
-    align-self: center;
-    margin-top: 5px;
 }
 a{
     text-decoration: none;
@@ -102,9 +51,6 @@ a{
     font-weight: bold;
     font-size: 14px;
 }
-.h-w-img{
-    height: 30px;
-}
 .btn-search{
     background-color: white;
     color: black;
@@ -117,11 +63,6 @@ a{
     align-items: center;
     transition: .6s;
     margin-left: 3%;
-}
-.btn-search:hover img{
-    background-color: #002f34;
-    color: white;
-    transition: .6s;
 }
 .container{
     display: flex;
@@ -216,13 +157,6 @@ a{
 }
 .menu a:hover .li-nav{
     color: gray;
-}
-.dropdown-menu{
-    padding-top: 10px;
-}
-.dropdown-li:hover{
-    color: gray;
-    transition: .3s;
 }
 .title-widget{
     text-align: center;
@@ -1446,6 +1380,47 @@ a{
 .title-message-head{
     background-color: white;
     padding: 20px;
+}
+.mobileapps-widget{
+    background-color: rgb(206, 221, 255);
+}
+.mobilesuccess-widget{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1%;
+}
+.title-mobileapps{
+    font-size: 50px;
+    font-weight: bold;
+    color: #002f34;
+}
+.mobileapps-desc-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.white-p{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #002f34;
+}
+.mobileapps-white-card{
+    background-color: white;
+    width: 340px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 3%;
+}
+.mobileapps-white-flex{
+    display: flex;
+    justify-content: center;
+}
+.title-white{
+    font-weight: bold;
+    font-size: x-large;
+    color: #002f34;
 }
 @media screen and (max-width: 970px){
     .no-ph{
