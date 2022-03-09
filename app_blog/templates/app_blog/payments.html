@@ -129,15 +129,15 @@
         <div class="payments-add-post-widget">
             <div class="payments-add-post-new">
                 <div class="payments-add-post-title-widget">
-                    <p class="payments-add-post-title">Разместить и рекламировать новое объявление</p>
+                    <p class="payments-add-post-title">Разместить новое объявление</p>
                 </div>
                 {% if user.is_authenticated %}
-                <button>
+                <button class="payments-add-btn">
                     <a href="{% url 'addpost' %}">Разместить объявление</a>
                 </button>
                 {% else %}
-                <button>
-                    <a href="{% url 'authorisation' %}">Разместить объяление</a>
+                <button class="payments-add-btn">
+                    <a href="{% url 'authorisation' %}" class="payments-add-btn-a">Разместить объяление</a>
                 </button>
                 {% endif %}
             </div>

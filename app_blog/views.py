@@ -118,3 +118,6 @@ def mobileapps(request):
 
 def payments(request):
     return render(request, 'app_blog/payments.html')
+
+def reklama(request):
+    return render(request, 'app_blog/reklama.html')

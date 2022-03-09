@@ -1521,17 +1521,55 @@ a{
     font-size: large;
 }
 .payments-add-post-widget{
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .payments-add-post-title{
-    font-size: 23px;
-    width: 20%;
+    font-size: 28px;
+    width: 60%;
     font-weight: bold;
     color: #002f34;
 }
 .payments-add-post-title-widget{
     display: flex;
     justify-content: center;
+}
+.payments-add-post-new{
+    margin-top: 5%;
+    background-color: white;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.payments-add-btn{
+    background-color: #002f34;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 3%;
+}
+.payments-add-btn-a{
+    color: white;
+    transition: .3s;
+}
+.payments-add-btn:hover .payments-add-btn-a{
+    color: greenyellow;
+    transition: .4s;
+}
+.reklama-content{
+    color: slategrey;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.reklama-ul{
+    width: 55%;
+}
+.li-frik a{
+    color: #002f34;
+}
+.p-frik{
+    margin-top: 3.5%;
 }
 @media screen and (max-width: 970px){
     .no-ph{
