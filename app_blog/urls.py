@@ -29,4 +29,5 @@ urlpatterns = [
     path('create', views.create, name = 'create'),
     path('developers', views.developers, name = 'developers'),
     path('mobileapps/', views.mobileapps, name = 'mobileapps'),
+    path('payments/', views.payments, name = 'payments'),
 ]

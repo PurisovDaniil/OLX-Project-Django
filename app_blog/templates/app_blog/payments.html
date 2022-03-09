@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Наборы платных услуг
+{% endblock %}
+{% block content %}
+<div class="payments-head">
+    <div class="payments-head-widget">
+        <p class="payments-title">Почему стоит рекламировать объявления на OLX?</p>
+        <div class="payments-head-img-widget">
+            <img src="{% static 'img/payments-title.png' %}" alt="" class="payments-head-img">
+        </div>
+    </div>
+    <div class="payments-uslugi">
+        <p class="payments-uslugi-title">Вам доступны такие услуги:</p>
+        <div class="payments-uslugi-cards">
+            <div class="payments-card">
+                <div class="payments-card-img">
+                    <img src="{% static 'img/payments-up.png' %}" alt="" class="payments-card">
+                </div>
+                <p class="payments-card-title">Поднятие</p>
+            </div>
+            <div class="payments-card">
+                <div class="payments-card-img">
+                    <img src="{% static 'img/payments-top.png' %}" alt="" class="payments-card">
+                </div>
+                <p class="payments-card-title">Размещение в топ</p>
+            </div>
+            <div class="payments-card">
+                <div class="payments-card-img">
+                    <img src="{% static 'img/payments-home.png' %}" alt="" class="payments-card">
+                </div>
+                <p class="payments-card-title">VIP-объявление</p>
+            </div>
+        </div>
+        <p class="payments-title-foot">(размещение на главной странице) Вы можете заказать каждую услугу отдельно или выбрать подходящий набор из нескольких услуг!</p>
+    </div>
+    <div class="payments-pay">
+        <div class="payments-pay-widget">
+            <div class="payments-pay-head">
+                <p class="payments-pay-head-title">Наборы платных услуг</p>
+                <p class="payments-new">NEW!</p>
+            </div>
+            <p class="payments-pay-title">Теперь вам не нужно задумываться, какая услуга сработает лучше для вашего объявления.</p>
+            <p class="payments-pay-title">Нужно только решить, насколько заметным вы хотите его сделать и как быстро желаете заключить сделку</p>
+            <div class="payments-pay-card-widget">
+                <div class="payments-pay-card">
+                    <div class="payments-pay-card-title">
+                        <p class="payments-pay-card-title-title">Легкий старт</p>
+                        <p class="payments-pay-card-title-foot-title">4х больше просмотров</p>
+                    </div>
+                    <div class="payments-pay-card-foot">
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-active">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img">
+                            </div>
+                            <p>Топ-объявление на 3 дня</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-deactive.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>Поднятие вверх списка</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-deactive.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>VIP-объявление</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments-pay-card">
+                    <div class="payments-pay-card-title">
+                        <p class="payments-pay-card-title-title">Быстрая продажа</p>
+                        <p class="payments-pay-card-title-foot-title">16х больше просмотров</p>
+                    </div>
+                    <div class="payments-pay-card-foot">
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-active">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img">
+                            </div>
+                            <p>Топ-объявление на 7 дней</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>3 поднятия вверх списка</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-deactive.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>VIP-объявление</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments-pay-card">
+                    <div class="payments-pay-card-title">
+                        <p class="payments-pay-card-title-title">Турбо продажа</p>
+                        <p class="payments-pay-card-title-foot-title">30х больше просмотров</p>
+                    </div>
+                    <div class="payments-pay-card-foot">
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-active">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img">
+                            </div>
+                            <p>Топ-объявление на 30 дней</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>9 поднятий вверх списка</p>
+                        </div>
+                        <div class="payments-pay-card-foot-widget">
+                            <div class="payments-pay-card-img-deactive">
+                                <img src="{% static 'img/payments-pay-active.png' %}" alt="" class="payments-pay-img-deactive">
+                            </div>
+                            <p>VIP-объявление на 7 дней</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payments-add-post">
+        <div class="payments-add-post-widget">
+            <div class="payments-add-post-new">
+                <div class="payments-add-post-title-widget">
+                    <p class="payments-add-post-title">Разместить и рекламировать новое объявление</p>
+                </div>
+                {% if user.is_authenticated %}
+                <button>
+                    <a href="{% url 'addpost' %}">Разместить объявление</a>
+                </button>
+                {% else %}
+                <button>
+                    <a href="{% url 'authorisation' %}">Разместить объяление</a>
+                </button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

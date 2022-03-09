@@ -115,3 +115,6 @@ def developers(request):
 
 def mobileapps(request):
     return render(request, 'app_blog/mobileapps.html')
+
+def payments(request):
+    return render(request, 'app_blog/payments.html')
