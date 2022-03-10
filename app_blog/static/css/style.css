@@ -1616,6 +1616,67 @@ a{
     font-weight: bold;
     font-size: 20px;
 }
+.ads-around-p-first{
+    font-size: 40px;
+    margin-top: 12%;
+    text-align: center;
+    font-weight: bold;
+    color: #002f34;
+}
+.ads-around-p-second{
+    text-align: center;
+    font-size: 22px;
+    color: #002f35;
+}
+.ads-around-img-widget{
+    text-align: center;
+}
+.find-tovar{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #002f34;
+}
+.ads-around-card-widget{
+    display: flex;
+    justify-content: center;
+}
+.ads-around-card{
+    background-color: white;
+    width: 20%;
+    margin-left: 1.5%;
+    padding: 1%;
+    text-align: center;
+}
+.ads-around-card-p-first{
+    color: #002f34;
+    font-size: 23px;
+    font-weight: bold;
+}
+.ads-around-select{
+    text-align: center;
+    color: #002f34;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 4%;
+}
+.ads-around-select-img-widget{
+    display: flex;
+    justify-content: center;
+}
+.ads-around-select-cards{
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+}
+.ads-around-select-card{
+    text-align: center;
+    margin-left: 5%;
+}
+.ads-around-select{
+    font-size: 20px;
+    font-weight: bold;
+}
 @media screen and (max-width: 970px){
     .no-ph{
         display: none;
