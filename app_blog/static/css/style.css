@@ -1137,7 +1137,8 @@ a{
     color: rgb(127, 160, 153);
 }
 .help-card-body-p-first:hover{
-    text-shadow: #002f34 1px 0 8px;
+    text-shadow: #002f34 1px 0 5px;
+    transition: .4s;
 }
 .help-card-body-p-second:hover{
     text-shadow: rgb(127, 160, 153) 1px 0 8px;
@@ -1208,6 +1209,16 @@ a{
     color: #002f34;
     font-size: 18px;
     padding-top: 18%;
+}
+.error-content{
+    margin-top: 6%;
+    margin-left: 8%;
+    margin-bottom: 10%;
+}
+.error-p{
+    color: #002f34;
+    font-size: 28px;
+    font-weight: bold;
 }
 .reg-p-bold{
     font-size: 20px;
@@ -1542,6 +1553,9 @@ a{
     padding: 20px;
     border-radius: 10px;
 }
+.my-profile{
+    text-align: center;
+}
 .payments-add-btn{
     background-color: #002f34;
     border: none;
@@ -1570,6 +1584,37 @@ a{
 }
 .p-frik{
     margin-top: 3.5%;
+}
+.scroll-buy{
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+.buy-deactive{
+    padding: 10px 15px 10px 15px;
+    margin-left: 3%;
+    transition: .4s;
+}
+.buy-deactive:hover{
+    background-color: white;
+    border-radius: 10px;
+    transition: .4s;
+}
+.buy-active{
+    padding: 10px 15px 10px 15px;
+    text-shadow: #002f34 1px 0 8px;
+    border-radius: 10px;
+    transition: .4s;
+}
+.buy-active:hover{
+    background-color: white;
+    border-radius: 10px;
+    transition: .4s;
+}
+.scroll-buy a{
+    color: #002f34;
+    font-weight: bold;
+    font-size: 20px;
 }
 @media screen and (max-width: 970px){
     .no-ph{

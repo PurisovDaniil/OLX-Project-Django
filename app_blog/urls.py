@@ -30,5 +30,9 @@ urlpatterns = [
     path('developers', views.developers, name = 'developers'),
     path('mobileapps/', views.mobileapps, name = 'mobileapps'),
     path('payments/', views.payments, name = 'payments'),
-    path('Реклама на OLX', views.reklama, name = 'reklama')
+    path('Реклама на OLX', views.reklama, name = 'reklama'),
+    path('help.olx.uz/rules', views.rules, name = 'rules'),
+    path('help.olx.uz/security', views.security, name = 'security'),
+    path('help.olx.uz/pravila-publikacii', views.error, name = 'error'),
+    path('olx.uz/howitworks', views.how_buy, name = 'buy'),
 ]

@@ -121,3 +121,15 @@ def payments(request):
 
 def reklama(request):
     return render(request, 'app_blog/reklama.html')
+
+def rules(request):
+    return render(request, 'app_blog/rules.html')
+
+def security(request):
+    return render(request, 'app_blog/security.html')
+
+def error(request):
+    return render(request, 'app_blog/error.html')
+
+def how_buy(request):
+    return render(request, 'app_blog/how_to_buy.html')
