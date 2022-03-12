@@ -5,44 +5,44 @@ OLX.uz - как продавать и покупать товары
 {% endblock %}
 {% block content %}
 <div class="scroll-buy">
-    <a href="{% url 'buy' %}" class="buy-active">Я хочу купить</a>
-    <a href="{% url 'sell' %}" class="buy-deactive">Я хочу продать</a>
+    <a href="{% url 'buy' %}" class="sell-deactive">Я хочу купить</a>
+    <a href="{% url 'sell' %}" class="sell-active">Я хочу продать</a>
 </div>
 <div class="ads-around">
-    <p class="ads-around-p-first">Найдите лучше предложения поблизости</p>
-    <p class="ads-around-p-second">Узнайте, как купить практичски всё</p>
+    <p class="ads-around-p-first">Найдите покупателей со свей страны</p>
+    <p class="ads-around-p-second">Узнайте, как продать практически всё что угодно</p>
     <div class="ads-around-img-widget">
-        <img src="{% static 'img/ads-around.png' %}" alt="" class="ads-around-img">
+        <img src="{% static 'img/ads-around-bg-second.png' %}" alt="" class="ads-around-img">
     </div>
-    <p class="find-tovar">Найдите и купите нужный товар</p>
+    <p class="find-tovar">Публикуйте объявления о продаже и заключайте успешные сделки</p>
     <div class="ads-around-card-widget">
         <div class="ads-around-card">
             <div class="ads-around-card-img-widget">
                 <img src="{% static 'img/ads-around-img.png' %}" alt="" class="ads-around-card-img">
             </div>
-            <p class="ads-around-card-p-first">Ищите что угодно</p>
-            <p class="ads-around-card-p-second">Перейдите на главную, чтобы начать искать то, что вам нужно, или посмотрите товары в интересующих вас категориях.</p>
+            <p class="ads-around-card-p-first">Сделайте фото товара</p>
+            <p class="ads-around-card-p-second">Прочтите, как опубликовать объявление, узнайте, зачем добавлять фото и как продавать ещё быстрее</p>
         </div>
         <div class="ads-around-card">
-            <div class="ads-around-card-img-widget">
-                <img src="{% static 'img/adsaroundcarddocument.png' %}" alt="" class="ads-around-card-img">
+            <div class="ads-around-card-img-widget" style="margin-top: 3%;">
+                <img src="{% static 'img/kayfarik.png' %}" alt="" class="ads-around-card-img">
             </div>
             <p class="ads-around-card-p-first">Найдите единственное объявление</p>
             <p class="ads-around-card-p-second">Просмотрите фото, детальное описание товара и профиль продавца</p>
         </div>
         <div class="ads-around-card">
-            <div class="ads-around-card-img-widget" style="margin-top: 3%;">
-                <img src="{% static 'img/adsaroundgames.png' %}" alt="" class="ads-around-card-img">
+            <div class="ads-around-card-img-widget">
+                <img src="{% static 'img/kit.png' %}" alt="" class="ads-around-card-img">
             </div>
-            <p class="ads-around-card-p-first">Свяжитесь с продавцом</p>
-            <p class="ads-around-card-p-second">Позвоните продавцу или отправьте сообщение в чате OLX, чтобы узнать больше о товаре и договориться о цене.</p>
+            <p class="ads-around-card-p-first">Общайтесь с покупателями</p>
+            <p class="ads-around-card-p-second">Отвечайте на вопросы покупателей, предоставьте им больше информации о товаре и договоритесь о цене.</p>
         </div>
         <div class="ads-around-card">
-            <div class="ads-around-card-img-widget" style="margin-top: 3%;">
-                <img src="{% static 'img/adsaroundbirka.png' %}" alt="" class="ads-around-card-img">
+            <div class="ads-around-card-img-widget" style="margin-top: 4.5%;">
+                <img src="{% static 'img/brat.png' %}" alt="" class="ads-around-card-img">
             </div>
-            <p class="ads-around-card-p-first">Купите и получите ваш товар!</p>
-            <p class="ads-around-card-p-second">Воспользуйтесь OLX доставка, чтобы получить товар, или договоритесь с продавцом о личной встрече в общественном месте.</p>
+            <p class="ads-around-card-p-first">Продавайте товар с доставкой!</p>
+            <p class="ads-around-card-p-second">Пользуйтесь OLX доставка, чтобы продать товар, или договоритесь с покупателем о личной встрече в общественном месте</p>
         </div>
     </div>
 </div>
@@ -73,6 +73,6 @@ OLX.uz - как продавать и покупать товары
     </div>
 </div>
 <div class="ads-around-btn">
-    <a href="{% url 'index' %}" class="ads-around-slug">Начать поиск</a>
+    <a href="{% url 'addpost' %}" class="ads-around-slug">Опубликовать объявление</a>
 </div>
 {% endblock %}

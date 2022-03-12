@@ -1602,7 +1602,7 @@ a{
 }
 .buy-active{
     padding: 10px 15px 10px 15px;
-    text-shadow: #002f34 1px 0 8px;
+    background-color: white;
     border-radius: 10px;
     transition: .4s;
 }
@@ -1615,6 +1615,22 @@ a{
     color: #002f34;
     font-weight: bold;
     font-size: 20px;
+}
+.sell-active{
+    background-color: white;
+    border-radius: 10px;
+    transition: .4s;
+    padding: 10px 15px 10px 15px;
+}
+.sell-deactive{
+    padding: 10px 15px 10px 15px;
+    margin-right: 3%;
+    transition: .4s;
+}
+.sell-deactive:hover{
+    background-color: white;
+    border-radius: 10px;
+    transition: .4s;
 }
 .ads-around-p-first{
     font-size: 40px;
@@ -1667,6 +1683,7 @@ a{
 .ads-around-select-cards{
     display: flex;
     margin-top: 3%;
+    margin-bottom: 8%;
     justify-content: center;
 }
 .ads-around-select-card{
@@ -1676,6 +1693,17 @@ a{
 .ads-around-select{
     font-size: 20px;
     font-weight: bold;
+}
+.ads-around-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.ads-around-slug{
+    padding: 1%;
+    background-color: #002f34;
+    color: white;
+    border-radius: 7px;
 }
 @media screen and (max-width: 970px){
     .no-ph{

@@ -133,3 +133,6 @@ def error(request):
 
 def how_buy(request):
     return render(request, 'app_blog/how_to_buy.html')
+
+def how_sell(request):
+    return render(request, 'app_blog/how_to_sell.html')
