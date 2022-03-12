@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.shortcuts import reverse
-from django.utils.translation import LANGUAGE_SESSION_KEY
 
 
 class Profile(models.Model):

@@ -44,11 +44,11 @@
 
 <p class="title-premium-card">Торговая площадка</p>
 <div class="premium-card-widget">
-    {% for product in products %}
+    {% for product in page_obj %}
     <div class="premium-card">
         {% if product.image.url != null %}
         <div class="premium-img-widget">
-            <img src="{{product.image.url}}" alt="..." class="premium-img">
+            <img src="{{ product.image.url }}" alt="..." class="premium-img">
         </div>
         {% else %}
         <div class="premium-img-widget">
@@ -56,10 +56,10 @@
         </div>
         {% endif %}
         <div class="premium-body-widget">
-            <p class="premium-body"><a href="{% url 'post_detail_url' %}" class="post-detail-a">{{product.title}}</a></p>
+            <p class="premium-body"><a href="{% url 'post_detail_url' product.id %}" class="post-detail-a">{{product.title}}</a></p>
         </div>
         <div class="premium-date-widget">
-            <p class="premium-date">{{product.description}}</p>
+            <p class="premium-date" style="word-wrap: break-word;">{{product.description|slice:'0:200'}}</p>
         </div>
         <div class="premium-footer">
             <div class="premium-price">
@@ -71,100 +71,22 @@
         </div>
     </div>
     {% endfor %}
-    <!-- <div class="premium-card">
-        <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
-        </div>
-        <div class="premium-body-widget">
-            <p class="premium-body">MacBookPro14</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Ничем не отличается от предыдущего своего родственника</p>
-        </div>
-        <div class="premium-footer">
-            <div class="premium-price">
-                Потеря девственности + 2000$
-            </div>
-            <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
-            </div>
-        </div>
+</div>
+<div class="pagination-widget">
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}"><-- previous</a>
+            {% endif %}
+    
+            <span class="current">
+                {{ page_obj.number }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next --></a>
+            {% endif %}
+        </span>
     </div>
-    <div class="premium-card">
-        <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
-        </div>
-        <div class="premium-body-widget">
-            <p class="premium-body">AirPods Pro</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Отличается своим качеством от других apple</p>
-        </div>
-        <div class="premium-footer">
-            <div class="premium-price">
-                2 652 000 сум
-            </div>
-            <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
-            </div>
-        </div>
-    </div>
-    <div class="premium-card">
-        <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
-        </div>
-        <div class="premium-body-widget">
-            <p class="premium-body">Электрический чайник</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Четкая вещь, качество хорошее, недорого</p>
-        </div>
-        <div class="premium-footer">
-            <div class="premium-price">
-                2 100 000 сум
-            </div>
-            <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
-            </div>
-        </div>
-    </div>
-    <div class="premium-card">
-        <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
-        </div>
-        <div class="premium-body-widget">
-            <p class="premium-body">Проводные наушники BOROFONE</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Топовое качество, цена дешманская, ограничено в продаже</p>
-        </div>
-        <div class="premium-footer">
-            <div class="premium-price">
-                50 000 сум
-            </div>
-            <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
-            </div>
-        </div>
-    </div>
-    <div class="premium-card">
-        <div class="premium-img-widget">
-            <img src="/app_blog/static/1.jpg" alt="" class="premium-img">
-        </div>
-        <div class="premium-body-widget">
-            <p class="premium-body">Инвалидная коляска</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Это то, что вы всегда искали, дешманская цена, ограничено в количестве</p>
-        </div>
-        <div class="premium-footer">
-            <div class="premium-price">
-                1 252 000 сум
-            </div>
-            <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="/app_blog/static/premium-favorite.PNG" alt=""></button> 
-            </div>
-        </div>
-    </div> -->
 </div>
 {% endblock %}
