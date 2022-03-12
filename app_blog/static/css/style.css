@@ -2,6 +2,11 @@ body{
     margin: 0;
     background-color:lavender;
 }
+.paginator{
+    display: flex;
+    align-items: center;
+
+}
 .navbar{
     display: flex;
     justify-content: space-around;
