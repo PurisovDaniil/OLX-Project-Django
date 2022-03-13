@@ -145,3 +145,6 @@ def how_buy(request):
 
 def how_sell(request):
     return render(request, 'app_blog/how_to_sell.html')
+
+def careers(request):
+    return render(request, 'app_blog/cariera-index.html')

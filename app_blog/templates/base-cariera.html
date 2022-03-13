@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="cariera-body">
+    <nav class="cariera-navbar">
+        <div class="cariera-img-widget">
+            <img src="{% static 'img/olx-group.png' %}" alt="" class="cariera-img">
+        </div>
+        <ul class="cariera-ul">
+            <li class="cariera-li"><a href="">STORY</a></li>
+            <li class="cariera-li"><a href="">MEDIA</a></li>
+            <li class="cariera-li"><a href="">BRANDS</a></li>
+            <li class="cariera-li"><a href="">OFFICES</a></li>
+            <li class="cariera-li"><a href="">IMPACT</a></li>
+            <li class="cariera-li-frik"><a href="">OPEN ROLES</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/carousel.js' %}"></script>
+</body>
+</html>
