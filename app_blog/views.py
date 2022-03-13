@@ -3,13 +3,20 @@ from django.db.models import Q
 from .forms import RegisterForm
 from django.contrib.auth.models import User
 from .models import Category, Image, Profile, Product
+from django.shortcuts import render, redirect
+from .models import Product
+from django.core.paginator import Paginator
+from django.utils import timezone
 
 # Create your views here.
 
 def index(request):
-    products = Product.objects.all
+    products = Product.objects.all()
     categories = Category.objects.all()
-    context = {'products': products, 'categories': categories}
+    paginator = Paginator(products, 9)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'categories': categories, 'page_obj' : page_obj}
     return render(request, 'app_blog/index.html', context)
 
 def register(request):
@@ -35,8 +42,9 @@ def save_bg(request):
             form.save(request.user)
     return redirect('index')
 
-def post_detail(request):
-    return render(request, 'app_blog/post_detail.html')
+def post_detail(request, id):
+    product = Product.objects.get(id=id)
+    return render(request, 'app_blog/post_detail.html', {'product' : product})
 
 def category_detail(request, slug):
     category = Category.objects.get(slug__exact = slug)
@@ -65,6 +73,7 @@ def create(request):
         product.description = request.POST.get('description')
         product.image = request.POST.get('image')
         product.sity_title = request.POST.get('sity_title')
+        product.price = request.POST.get('price')
         product.save()
     return redirect('index')
 
