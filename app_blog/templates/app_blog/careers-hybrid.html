@@ -1,0 +1,37 @@
+{% extends 'base-cariera.html' %}
+{% block title %}
+{% load static %}
+Hybrid Work at OLX Group | OLX Careers
+{% endblock %}
+{% block content %}
+<div class="hybrid-header-title">
+    <div class="hybrid-header-widget">
+        <p class="careers-head-first">OLX GROUP VISION FOR WORK</p>
+        <p class="careers-head-second-first">Hybrid Work at OLX</p>
+        <p class="careers-head-second">At OLX Group, we believe that our values live in our hearts, not our hallways. Working from home the past 15+ months has changed everything. While has time has been challenging we have also discovered a more flexible style of work that comes with new benefits.</p>
+        <button class="careers-head-btn">See hybrid jobs</button>
+    </div>
+    <div class="hybrid-img">
+        <img src="{% static 'img/hybrid.png' %}" alt="" class="hybrid-img-image">
+    </div>
+</div>
+<div class="why-hybrid-widget">
+    <div class="why-header-widget">
+        <p class="careers-head-second-first">Why Hybrid?</p>
+        <p class="why-head-second">We want to build a company where people can do their best work. Some people work best in an office buildings, while others work best from a home office. That's why flexibility is more important than ever. Amazing candidates increasingly expect flexible work, and as employers, we'll miss out on great people if we don't adapt.</p>
+    </div>
+    <div class="why-hybrid-img">
+        <img src="{% static 'img/why.png' %}" alt="" class="why-hybrid-image">
+    </div>
+</div>
+<div class="how-hybrid-widget">
+    <div class="how-hybrid-img">
+        <img src="{% static 'img/how.png' %}" alt="" class="how-hybrid-image">
+    </div>
+    <div class="how-header-widget">
+        <p class="how-first">How Hybrid Works</p>
+        <p class="how-second">We have learned through surveys and workshops that the majority of OLXers prefer some form of flexible work. We also collected input from business unit leaders and cross-functional groups to ensure we maintain our culture of collabaration which our business depends on. Finally, we embraced a set of principles including team connection, flexibility, adapting to market reality, inclusiveness, and being intentional about designig our ways of working. </p>
+    </div>
+</div>
+
+{% endblock %}

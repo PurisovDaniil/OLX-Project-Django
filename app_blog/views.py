@@ -148,3 +148,6 @@ def how_sell(request):
 
 def careers(request):
     return render(request, 'app_blog/cariera-index.html')
+
+def hybrid(request):
+    return render(request, 'app_blog/careers-hybrid.html')
