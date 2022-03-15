@@ -6,8 +6,8 @@
 {% block content %}
 <div class="content">
     <div class="search-first">
-        <img src="{% static 'img/search.PNG' %}" alt="" class="no-ph">
         <form action="{% url 'search_url' %}" method="GET" class="search-first-form">
+            <img src="{% static 'img/search.PNG' %}" alt="">
             <input type="search" placeholder="Поиск объявлений" class="input-search-first" name="search_input">
             <button class="btn-search">Поиск</button>
         </form>
@@ -46,7 +46,8 @@
 <div class="premium-card-widget">
     {% for product in page_obj %}
     <div class="premium-card">
-        {% if product.image.url != null %}
+        <a href="{% url 'post_detail_url' product.id %}">
+            {% if product.image.url != null %}
         <div class="premium-img-widget">
             <img src="{{ product.image.url }}" alt="..." class="premium-img">
         </div>
@@ -58,33 +59,37 @@
         <div class="premium-body-widget">
             <p class="premium-body"><a href="{% url 'post_detail_url' product.id %}" class="post-detail-a">{{product.title}}</a></p>
         </div>
-        <div class="premium-date-widget">
-            <p class="premium-date" style="word-wrap: break-word;">{{product.description|slice:'0:200'}}</p>
-        </div>
         <div class="premium-footer">
             <div class="premium-price">
-            {{product.price}}
+            {{product.price}}$
             </div>
             <div class="premium-add-to-favorites">
                <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
             </div>
         </div>
+        <!-- <div>
+            {% csrf_token %}
+            <a href="{% url 'delete' product.id %}">удалить</a>
+        </div> -->
     </div>
     {% endfor %}
+        </a>
 </div>
 <div class="pagination-widget">
     <div class="pagination">
         <span class="step-links">
             {% if page_obj.has_previous %}
-                <a href="?page={{ page_obj.previous_page_number }}"><-- previous</a>
+            <div class="step-link-widget-first">
+                <a href="?page={{ page_obj.previous_page_number }}" class="step-link-first">Back</a>
+            </div>
             {% endif %}
-    
-            <span class="current">
-                {{ page_obj.number }}.
-            </span>
-    
+            <div class="current-widget">
+                <p>{{ page_obj.number }}</p>
+            </div>
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">next --></a>
+            <div class="step-link-widget-second">
+                <a href="?page={{ page_obj.next_page_number }}" class="step-link-second">Next</a>
+            </div>
             {% endif %}
         </span>
     </div>

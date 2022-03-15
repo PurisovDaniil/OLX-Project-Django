@@ -12,71 +12,58 @@
         <img src="{% static 'img/1.jpg' %}" alt="" class="post-photo">
         {% endif %}
     </div>
-    <div>
-        <div class="contact-widget no-ph">
-            <p class="p-username">Пользователь:</p>
-            <div class="contact">
-                <div class="contact-avatar-widget">
-                    <img src="{% static 'img/avatar.PNG' %}" alt="" class="contact-avatar">
-                </div>
-                <div class="contact-number-widget">
-                    <p class="user-number">998 91 333 88 10</p>
-                </div>
-            </div>
-        </div>
-        <div class="gps-widget">
+    <div class="gps-widget">
+        <div class="gps-widget-center">
             <p class="gps-p">Местоположение:</p>
             <div class="d-flex">
                 <div>
                     <img src="{% static 'img/gps-tracker.PNG' %}" alt="" style="width: 50px;">
                 </div>
                 <div style="display: flex; align-items: center; width: 80%;">
-                    <span>Шайхантахурский район</span>
+                    <span>{{product.sity_title}}</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="post-description-widget">
-    <div class="post-description">
-        <div class="d-flex" style="justify-content: space-between;">
-            <p>Опубликовано: 20 февраля 2022 г.</p>
-            <button class="favorite-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button>
-        </div>
-        <div class="post-detail-title-widget">
-            <p class="post-detail-title">{{product.title}}</p>
-            <p class="post-price">{{product.price}}</p>
-            <p class="post-detail-description">Описание:</p>
-            <p class="post-detail-dsc">{{product.description}}</p>
-            <hr>
-            <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                <p><a href="" class="d-flex" style="align-items: center; color: black;">
-                    <img src="{% static 'img/red-flag.PNG' %}" alt="">Пожаловаться
-                </a></p>
-            </div>
-        </div>
-    </div>
-    <div class="message-description-widget">
-        <form action="" method="">
-            <div class="author-description">
-                <div class="author-description-widget">
-                    <div class="author">
-                        <img src="{% static 'img/avatar.PNG' %}" alt="">
-                        <p>Kakoy ta Boburbek</p>
-                    </div>
-                    <div class="author-phone-widget">
-                        <img src="{% static 'img/call.PNG' %}" alt="">
-                        <p class="author-phone">+998 97 923 56 66</p>
-                    </div>
-                </div>
-                <div class="message-send">
-                    <textarea name="" id="" placeholder="Напишите сообщение..." style="resize: none;" class="message-send-textarea"></textarea>
-                </div>
-                <div class="message-send-btn-widget">
-                    <button class="message-send-btn">Отправить</button>
+    <div class="post-description-widget-center">
+        <div class="post-description">
+            <div class="post-detail-title-widget">
+                <p class="post-detail-title">{{product.title}}</p>
+                <p class="post-price">Цена: {{product.price}}$</p>
+                <p class="post-detail-description">Описание:</p>
+                <p class="post-detail-dsc">{{product.description}}</p>
+                <hr>
+                <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                    <p><a href="" class="d-flex" style="align-items: center; color: black;">
+                        <img src="{% static 'img/red-flag.PNG' %}" alt="">Пожаловаться
+                    </a></p>
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="message-description-widget">
+            <form action="" method="" class="form-send-message">
+                <div class="author-description">
+                    <div class="author-description-widget">
+                        <div class="author">
+                            <img src="{% static 'img/avatar.PNG' %}" alt="">
+                            <p>{{product.username}}</p>
+                        </div>
+                        <div class="author-phone-widget">
+                            <img src="{% static 'img/call.PNG' %}" alt="">
+                            <p class="author-phone">{{product.usernumber}}</p>
+                        </div>
+                    </div>
+                    <div class="message-send">
+                        <textarea name="" id="" placeholder="Напишите сообщение..." style="resize: none;" class="message-send-textarea"></textarea>
+                    </div>
+                    <div class="message-send-btn-widget">
+                        <button class="message-send-btn">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

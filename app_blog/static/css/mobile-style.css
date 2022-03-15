@@ -12,16 +12,7 @@
         text-align: center;
     }
     .search-first-form{
-        display: block;
-    }
-    .input-search-first{
-        height: 100%;
-    }
-    .btn-search{
-        margin-top: 3%;
         display: flex;
-        justify-content: center;
-        margin-left: 30%;
     }
     .menu{
         display: block;
@@ -43,15 +34,23 @@
     .author-widget{
         width: 90%;
     }
+    .premium-card{
+        margin: 0 0 5% 0;
+    }
     .head-register{
+        text-align: center;
+    }
+    .reklama-widget{
         text-align: center;
     }
     .post-detail-contact-content{
         display: block;
+        flex-wrap: wrap;
     }
     .post-detail-photo{
-        width: 90%;
+        width: 100%;
         margin-left: 3%;
+        margin-right: 3%;
         margin-bottom: 5%;
     }
     .post-photo{
@@ -60,23 +59,33 @@
     .author-description-widget{
         display: block;
     }
-    .message-description-widget{
-        width: 100%;
+    .author-description{
+        width: 91% !important;
     }
     .message-send-btn-widget{
         display: flex;
         justify-content: center;
     }
     .post-description-widget{
-        width: 94%;
-        margin-bottom: 20%;
+        margin-left: 0px !important;
     }
     .post-description{
-        width: 89.5%;
+        width: 85% !important;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
     }
     .gps-widget{
-        width: 84%;
+        width: 100% !important;
         margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
+    }
+    .message-description-widget{
+        width: 94% !important;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 5%;
     }
     .title-message-widget{
         display: block;
@@ -118,5 +127,8 @@
     }
     .description-widget{
         width: 89%;
+    }
+    .pagination{
+        width: 70% !important;
     }
 }

@@ -69,11 +69,12 @@ def create(request):
     if request.method == 'POST':
         product = Product()
         product.title = request.POST.get('title')
-        product.date = request.POST.get('date')
         product.description = request.POST.get('description')
         product.image = request.POST.get('image')
         product.sity_title = request.POST.get('sity_title')
         product.price = request.POST.get('price')
+        product.usernumber = request.POST.get('usernumber')
+        product.username = request.POST.get('username')
         product.save()
     return redirect('index')
 
