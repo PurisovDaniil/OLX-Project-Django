@@ -1122,3 +1122,7 @@
     color: white;
     border-radius: 7px;
 }
+.carousel-gallery{
+    display: flex;
+    align-items: center;
+}

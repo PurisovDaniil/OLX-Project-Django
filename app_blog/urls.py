@@ -38,4 +38,6 @@ urlpatterns = [
     path('olx.uz/howitworks/sell', views.how_sell, name = 'sell'),
     path('careers.olx.group', views.careers, name = 'careers'),
     path('careers.olx.group/hybrid-work-at-olx/', views.hybrid, name = 'hybrid'),
+    path('careers.olx.group/story', views.story, name = 'story'),
+    path('delete/<int:id>', views.delete, name = 'delete'),
 ]

@@ -12,7 +12,7 @@
 .cariera-li{
     color: white;
     list-style-type: none;
-    font-size: 12.5px;
+    font-size: 13px;
     padding: 25px 20px 20px 20px;
     margin-left: 10px;
     transition: .3s;
@@ -108,7 +108,7 @@
     color: white;
     font-size: large;
     font-family: ibm-text;
-    width: 70%;
+    width: 86%;
 }
 .careers-left-third{
     color: white;
@@ -148,15 +148,15 @@
     }
 }
 #gallery{
-    width: 40%;
+    width: 50%;
     margin: 20px auto;
     text-align: center;
 }
 .prev{
     border: none;
-    background-color: rgb(155, 255, 161);
     font-family: Inria-Sens;
-    padding: 12px 35px 10px 35px;
+    background-color: black;
+    padding: 12px 35px 10px 0px;
     font-size: 15px;
     border-radius: 5px;
     outline: none;
@@ -203,7 +203,7 @@
     align-items: center;
 }
 .team-widget-text{
-    width: 50%;
+    width: 40%;
 }
 .left-img{
     width: 48%;
@@ -246,6 +246,9 @@
 .careers-head-btn:hover{
     cursor: pointer;
 }
+.carousel-widget{
+    margin-top: 8%;
+}
 .team-widget-slug-first:hover{
     background-color: rgba(78, 128, 81, 97);
     color: white;
@@ -276,6 +279,7 @@
 .hybrid-header-title{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 3%;
 }
 .hybrid-header-widget{
@@ -284,6 +288,7 @@
 .why-hybrid-widget{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -305,6 +310,7 @@
 .how-hybrid-widget{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 5%;
 }
 .how-header-widget{
@@ -317,4 +323,76 @@
     font-weight: bold;
     width: 100%;
     font-family: ibm-text;
+}
+.hybrid-first-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.home-first{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    width: 100%;
+    font-family: ibm-text;
+}
+.home-second{
+    color: white;
+    font-size: large;
+    font-family: ibm-text;
+    width: 90%;   
+}
+.hybrid-first-header-widget{
+    width: 43%;
+}
+.office-second{
+    color: white;
+    font-size: large;
+    font-family: ibm-text;
+    width: 93%;
+}
+.hybrid-office-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.hybrid-office-header-widget{
+    margin-left: 2%;
+    width: 43%;
+}
+.onsite-only{
+    color: white;
+    font-size: large;
+    font-family: ibm-text;
+    width: 45%;
+}
+.onsite-only-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.onsite-only-second{
+    width: 90%;
+}
+.discover-second{
+    color: white;
+    font-size: large;
+    font-family: ibm-text;
+    width: 93%;
+}   
+.discover-more-widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.discover-more{
+    margin-left: 3%;
+}
+@font-face {
+    font-family: heavy;
+    src: url(fonts/castledown-heavy.ttf);
 }

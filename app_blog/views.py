@@ -2,11 +2,11 @@ from django.shortcuts import render, redirect, reverse
 from django.db.models import Q
 from .forms import RegisterForm
 from django.contrib.auth.models import User
-from .models import Category, Image, Profile, Product
-from django.shortcuts import render, redirect
-from .models import Product
+from .models import Category, Product
 from django.core.paginator import Paginator
 from django.utils import timezone
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.db.models.deletion import ProtectedError
 
 # Create your views here.
 
@@ -76,6 +76,16 @@ def create(request):
         product.price = request.POST.get('price')
         product.save()
     return redirect('index')
+
+def delete(request, id):
+    product = Product.objects.get(id=id)
+    if request.method == 'POST':
+        try:
+            product.delete()
+            return redirect(reverse('index'))
+        except ProtectedError:
+            return HttpResponse('не нихуя')
+    return render(request, 'app_blog/delete.html', {'product':product})
 
 def favorites(request):
     return render(request, 'app_blog/favorites.html')
@@ -151,3 +161,6 @@ def careers(request):
 
 def hybrid(request):
     return render(request, 'app_blog/careers-hybrid.html')
+
+def story(request):
+    return render(request, 'app_blog/careers-story.html')
