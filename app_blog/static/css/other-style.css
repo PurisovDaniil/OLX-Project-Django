@@ -251,6 +251,10 @@
 .mini-menu{
     display: flex;
 }
+.menu-second a{
+    color: #002f34;
+    font-family: roboto;
+}
 .mini-li-nav{
     list-style-type: none;
     padding: 20px 20px 0 20px;

@@ -377,6 +377,17 @@ a{
     padding: 7px;
     font-family: roboto;
 }
+.footer-menu a{
+    font-family: roboto;
+    color: #002f34;
+}
+.footer-li-frik{
+    list-style-type: none;
+    font-family: roboto;
+    padding: 7px;
+    display: flex;
+    color: #002f34;
+}
 .footer-li-second{
     list-style: none;
     padding: 9.5px;
