@@ -6,8 +6,8 @@
 {% block content %}
 <div class="post-detail-contact-content">
     <div class="post-detail-photo">
-        {% if post.image.url != null %}
-        <img src="{{product.image.url}}" alt="" class="post-photo">
+        {% if product.image.url != null %}
+        <img src="{{ product.image.url }}" alt="" class="post-photo">
         {% else %}
         <img src="{% static 'img/1.jpg' %}" alt="" class="post-photo">
         {% endif %}

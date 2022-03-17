@@ -8,7 +8,6 @@ urlpatterns = [
     path('search/', views.search_function, name = 'search_url'),
     path('post_detail/<int:id>/', views.post_detail, name = 'post_detail_url'),
     path('categories/<slug:slug>', views.category_detail, name = 'category_detail_url'),
-    path('profile/', views.profile, name = 'profile_url'),
     path('profile/save_bg/', views.save_bg, name = 'save_bg'),
     path('authorisation/', views.authorisation, name = 'authorisation'),
     path('addpost/', views.addpost, name = 'addpost'),
@@ -39,5 +38,7 @@ urlpatterns = [
     path('careers.olx.group', views.careers, name = 'careers'),
     path('careers.olx.group/hybrid-work-at-olx/', views.hybrid, name = 'hybrid'),
     path('careers.olx.group/story', views.story, name = 'story'),
-    path('delete/<int:id>', views.delete, name = 'delete'),
+    path('delete_product/<int:id>', views.delete, name = 'delete'),
+    path('business.olx.uz', views.business, name = 'bus'),
+    path('update/<int:id>', views.update, name = 'update'),
 ]

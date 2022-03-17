@@ -47,7 +47,7 @@
     {% for product in page_obj %}
     <div class="premium-card">
         <a href="{% url 'post_detail_url' product.id %}">
-            {% if product.image.url != null %}
+        {% if product.image.url != null %}
         <div class="premium-img-widget">
             <img src="{{ product.image.url }}" alt="..." class="premium-img">
         </div>
@@ -67,10 +67,16 @@
                <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
             </div>
         </div>
-        <!-- <div>
-            {% csrf_token %}
-            <a href="{% url 'delete' product.id %}">удалить</a>
-        </div> -->
+        <div class="footer-redact-widget">
+            <div class="delete-redact">
+                {% csrf_token %}
+                <a href="{% url 'delete' product.id %}" class="delete-redact-a">удалить</a>
+            </div>
+            <div class="update-redact">
+                {% csrf_token %}
+                <a href="{% url 'update' product.id %}" class="update-redact-a">изменить</a>
+            </div>
+        </div>
     </div>
     {% endfor %}
         </a>

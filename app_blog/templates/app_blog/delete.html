@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-Подтвердите удаление {{product.title}}
+Подтверждение удаления объекта
 {% endblock %}
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    <input type="submit" value="удалить">
+<form method="POST" class="form-delete">
+    <div class="delete-form-widget">
+        {% csrf_token %}
+        <p class="delete-form-title">Подтвердите удаление объекта "{{product.title}}"</p>
+        <input type="submit" value="DELETE" class="delete-input">
+    </div>
 </form>
 {% endblock %}

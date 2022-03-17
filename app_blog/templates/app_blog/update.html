@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 {% block title %}
-{% load static %}
-Доска объявлений OLX.uz
+Изменение объявления
 {% endblock %}
 {% block content %}
 <div class="content-ad">
-    <p class="create-ad">Создать объявление</p>
+    <p class="create-ad">Изменить объявление</p>
     <div class="ad-name-widget">
-        <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+        <form action="{% url 'update' product.id %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <p class="ad-name">Опишите в подробностях</p>
             <p class="ad-name-second">Укажите название*</p>
-            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title" required>
+            <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title" required value="{{product.title}}">
             <p>Выберите категорию*</p>
             <select id="" class="category-select">
                 <option value="" class="category-select-option">Детский мир</option>
@@ -27,27 +26,25 @@
             </select>
             <div class="photo-widget">
                 <p class="ad-name" style="margin-top: 10%;">Фото</p>
-                <p class="ad-name-second" style="color: gray; font-size: 13px;">Нажмите на "Добавить фото", чтобы добавить фото к вашему объявлению.</p>
-                <p class="photo-label-btn">
-                    <label for="files" class="photo-label">Добавить фото</label>
-                </p>
+                <p class="ad-name-second" style="color: gray; font-size: 13px;">Нажмите на "Изменить фото", чтобы изменить фотографию объявления.</p>
+                <label for="files" class="photo-label">Изменить фото</label>
                 <input type="file" style="visibility: hidden;" id="files" name="image">
             </div>
             <p class="ad-name-second" style="margin-top: 10%;">Описание*</p>
-            <textarea name="description" id="" class="description-widget" placeholder="Подумайте, какие подробности вы хотели бы узнать из объявления. И добавьте их в описание" required></textarea>
+            <textarea name="description" id="" class="description-widget" placeholder="{{product.description}}" required></textarea>
             <p class="ad-name" style="margin-top: 10%;">Контакная информация</p>
             <p class="ad-name-second">Местоположение*</p>
-            <input type="text" class="object-input-widget" placeholder="Название города или индекс" name="sity_title" required>
+            <input type="text" class="object-input-widget" placeholder="Название города или индекс" name="sity_title" required value="{{product.sity_title}}">
             <p class="ad-name-second">Цена</p>
-            <input type="text" class="object-input-widget" placeholder="Цена" name="price" required>
+            <input type="text" class="object-input-widget" placeholder="Цена" name="price" required value="{{product.price}}">
             <p class="ad-name-second">Контактное лицо</p>
             <input type="text" class="object-input-widget" name="username" required value="{{user.username}}">
             <p class="ad-name-second">Email-адрес</p>
             <input type="email" class="object-input-widget" value="{{user.email}}">
             <p class="ad-name-second">Номер телефона</p>
-            <input type="number" class="object-input-widget" placeholder="Ваш номер телефона (пример: '+998913334450')" required name="usernumber">
+            <input type="number" class="object-input-widget" placeholder="Ваш номер телефона (пример: '+998913334450')" required name="usernumber" value="{{product.usernumber}}">
             <div class="send-widget">
-                <button class="send-btn" type="submit">Опубликовать</button>
+                <button class="send-btn" type="submit">Изменить</button>
             </div>
         </form>
     </div>

@@ -229,6 +229,9 @@ a{
     border-radius: 5px;
     color: white;
 }
+.send-btn:hover{
+    cursor: pointer;
+}
 .reklama-widget{
     display: flex;
     justify-content: center;
@@ -258,6 +261,8 @@ a{
 }
 .premium-img{
     width: 100%;
+    height: 150px;
+    object-fit: contain;
 }
 .premium-card{
     background-color: white;
@@ -374,8 +379,9 @@ a{
 }
 .footer-li{
     list-style-type: none;
-    padding: 7px;
+    margin: 10px 10px 20px 10px;
     font-family: roboto;
+    transition: .3s;
 }
 .footer-menu a{
     font-family: roboto;
@@ -384,25 +390,27 @@ a{
 .footer-li-frik{
     list-style-type: none;
     font-family: roboto;
-    padding: 7px;
+    margin: 10px 10px 20px 10px;
     display: flex;
     color: #002f34;
+    transition: .3s;
 }
 .footer-li-second{
     list-style: none;
-    padding: 9.5px;
+    margin: 10px 10px 20px 10px;
+    transition: .3s;
 }
-.footer-li a:hover{
+.footer-li:hover{
     text-shadow: #002f34 2px 0 10px;
-    transition: .6s;
+    transition: .4s;
 }
 .footer-li-second a{
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 17.5px;
-    transition: .6s;
+    transition: .3s;
 }
-.footer-li-second a:hover{
+.footer-li-second:hover{
     text-shadow: #002f34 2px 0 10px;
     transition: .6s;
 }
