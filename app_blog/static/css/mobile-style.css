@@ -99,20 +99,46 @@
         margin-bottom: 5%;
     }
     .title-message-widget{
-        display: block;
+        display: block !important;
         width: 100%;
     }
-    .mini-menu{
-        display: block;
+    .title-message-p{
         text-align: center;
     }
-    .messages-widget{
-        display: block;
-    }
-    .messages{
-        padding: 0;
+    .title-pay-widget{
         display: flex;
         justify-content: center;
+    }
+    .content-developers-cards{
+        display: block !important;
+    }
+    .developer-img-widget{
+        display: flex;
+        justify-content: center;
+    }
+    .messages-widget{
+        display: block !important;
+    }
+    .balance-widget{
+        display: block !important;
+    }
+    .balance-widget-btns{
+        margin-top: 5%;
+    }
+    .balance-span{
+        display: flex;
+        justify-content: center;
+    }
+    .mini-menu{
+        display: block !important;
+        text-align: center;
+    }
+    .messages-li{
+        padding: 10px 0 10px 0;
+    }
+    .messages{
+        display: block !important;
+        text-align: center;
     }
     .month{
         display: flex;

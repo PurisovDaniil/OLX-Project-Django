@@ -5,6 +5,7 @@ from .models import Category, Product
 from django.core.paginator import Paginator
 from django.core.files.storage import FileSystemStorage
 from django.utils import timezone
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.db.models.deletion import ProtectedError
 
@@ -31,8 +32,8 @@ def register(request):
 
 def search_function(request):
     query = request.GET.get('search_input')
-    posts = Product.objects.filter(Q(title__icontains = query))
-    context = {'query': query, 'posts': posts}
+    products = Product.objects.filter(Q(title__icontains = query))
+    context = {'query': query, 'products': products}
     return render(request, 'app_blog/search.html', context)
 
 def save_bg(request):

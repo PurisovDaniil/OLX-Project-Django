@@ -4,24 +4,47 @@
 Поиск по запросу: {{query}}
 {% endblock %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="row">
-                {% for post in posts %}
-                <div class="col-md-4">
-                    {% if post.image.url != null %}
-                    <img src="{{post.image.url}}" alt="...">
-                    {% else %}
-                    <img src="{{post.title}}" alt="" class="scard-img-top">
-                    {% endif %}
-                    <h3>{{post.title}}</h3>
+<div class="search-function-content">
+    <h2 style="text-align: center; color: #002f34;">Результаты поиска по вашему запросу:</h3>
+    <div class="premium-card-widget">
+        {% for product in products %}
+        <div class="premium-card">
+            <a href="{% url 'post_detail_url' product.id %}">
+            {% if product.image.url != null %}
+            <div class="premium-img-widget">
+                <img src="{{ product.image.url }}" alt="..." class="premium-img">
+            </div>
+            {% else %}
+            <div class="premium-img-widget">
+                <img src="{% static 'img/1.jpg' %}" alt="" class="premium-img">
+            </div>
+            {% endif %}
+            <div class="premium-body-widget">
+                <p class="premium-body"><a href="{% url 'post_detail_url' product.id %}" class="post-detail-a">{{product.title}}</a></p>
+            </div>
+            <div class="premium-footer">
+                <div class="premium-price">
+                {{product.price}}$
                 </div>
-                {% empty %}
-                    <h2 style="text-align: center;">По вашему запросу: "{{query}}" ничего не найдено.</h2>
-                {% endfor %}
+                <div class="premium-add-to-favorites">
+                   <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
+                </div>
+            </div>
+            </a>
+            <div class="footer-redact-widget">
+                <div class="delete-redact">
+                    {% csrf_token %}
+                    <a href="{% url 'delete' product.id %}" class="delete-redact-a">удалить</a>
+                </div>
+                <div class="update-redact">
+                    {% csrf_token %}
+                    <a href="{% url 'update' product.id %}" class="update-redact-a">изменить</a>
+                </div>
             </div>
         </div>
     </div>
+    {% empty %}
+    <h2 style="text-align: center;">По вашему запросу "{{query}}" ничего не найдено.</h2>
+    {% endfor %}
 </div>
 {% endblock %}
