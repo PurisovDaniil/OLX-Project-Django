@@ -14,7 +14,7 @@
 <body>
     <div class="navbar">
         <div class="nav-widget-logo no-ph">
-            <img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
+            <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
         </div>
         <ul class="menu">
             {% if user.is_authenticated %}

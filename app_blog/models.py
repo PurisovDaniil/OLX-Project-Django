@@ -47,6 +47,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
+    users = models.ManyToManyField(User, related_name='favorite_products')
     price = models.IntegerField(default=False)
     description = models.CharField(max_length=455)
     image = models.ImageField(null=True, blank=True)

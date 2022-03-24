@@ -60,6 +60,7 @@ a{
 .content{
     display: flex;
     justify-content: center;
+    font-family: roboto;
 }
 .author-widget{
     background-color: #002f34;
@@ -345,6 +346,10 @@ a{
 }
 .about-olx-widget{
     padding-bottom: 1%;
+}
+@font-face {
+    font-family: platform;
+    src: url(fonts/Platform-Bold.ttf);
 }
 .about-olx-img{
     display: flex;

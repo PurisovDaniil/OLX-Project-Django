@@ -73,7 +73,7 @@ def create(request):
         product.username = request.POST.get('username')
         product.save()
     return redirect('index')
-
+    
 def update(request, id):
     product = Product.objects.get(id=id)
     if request.method == 'POST':
