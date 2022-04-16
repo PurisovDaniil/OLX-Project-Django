@@ -5,17 +5,15 @@
 {% endblock %}
 {% block content %}
 <div class="content">
-    <div class="search-first">
-        <form action="{% url 'search_url' %}" method="GET" class="search-first-form">
-            <img src="{% static 'img/search.PNG' %}" alt="">
-            <input type="search" placeholder="Поиск объявлений" class="input-search-first" name="search_input">
-            <button class="btn-search">Поиск</button>
-        </form>
-    </div>
+    <form action="{% url 'search_url' %}" method="GET" class="search-first-form">
+        <img src="{% static 'img/magnifying-glass-solid.svg' %}" class="search-ico">
+        <input type="search" placeholder="Поиск объявлений" class="input-search-first" name="search_input">
+        <button class="btn-search">Поиск</button>
+    </form>
 </div>
 <div class="categories">
     <div class="title-widget">
-        <p class="title">Главные категории</p>
+        <p class="title">Главные категории:</p>
     </div>
     <div class="category-widget">
         {% for category in categories %}
@@ -42,7 +40,7 @@
     <p>Здесь должна быть реклама, но мне, к сожалению, за неё не платили</p>
 </div>
 
-<p class="title-premium-card">Торговая площадка</p>
+<p class="title-premium-card">Торговая площадка:</p>
 <div class="premium-card-widget">
     {% for product in page_obj %}
     <div class="premium-card">
@@ -64,7 +62,9 @@
             {{product.price}}$
             </div>
             <div class="premium-add-to-favorites">
-               <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
+                <a href="{% url 'add_favourite' product.id %}">
+                    <button class="premium-btn">to Favorites</button> 
+                </a>
             </div>
         </div>
         <div class="footer-redact-widget">
@@ -79,7 +79,6 @@
         </div>
     </div>
     {% endfor %}
-        </a>
 </div>
 <div class="pagination-widget">
     <div class="pagination">

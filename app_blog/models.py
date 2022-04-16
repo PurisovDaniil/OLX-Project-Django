@@ -54,3 +54,8 @@ class Product(models.Model):
     sity_title = models.CharField(max_length=255)
     usernumber = models.IntegerField(default=False)
     username = models.CharField(max_length=15)
+
+class Favourite(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)

@@ -4,15 +4,8 @@
 Избранные объявления
 {% endblock %}
 {% block content %}
-<div class="favorites-widget">
-    <div class="favorites-p">
-        <p>Избранные объявления</p>
-    </div>
-    <ul class="favorites-menu">
-        <li class="li-favorites"><a href="{% url 'favorites' %}" class="favorites-active">Избранные объявления</a></li>
-        <li class="li-favorites"><a href="{% url 'favorites_search' %}">Избранные результаты поиска</a></li>
-        <li class="li-favorites"><a href="{% url 'favorites_lastseen' %}">Недавно просмотренные</a></li>
-    </ul>
+<div class="favorites-p">
+    <p style="margin: 0; text-align: center;">Избранные объявления:</p>
 </div>
 <div class="favorites-nomes-widget">
     <div class="favorites-nomes">
@@ -24,22 +17,27 @@
         <p class="favorites-nomes-p-second">Теперь избранные объявения всегда доступны на любом компьютере, а также на мобильной версии сайта, после входа в Мои объявления</p>
     </div>
 </div>
-<!-- <div class="favorite-card-widget">
+
+<div class="favorite-card-widget">
+    {% for product in product %}
     <div class="premium-card">
         <div class="premium-img-widget">
-            <img src="{% static 'img/1.jpg' %}" alt="" class="premium-img">
+            <img src="{{ product.product.image.url }}" alt="" class="premium-img">
         </div>
         <div class="premium-body-widget">
-            <p class="premium-body">iPhone 13 Pro Max</p>
-        </div>
-        <div class="premium-date-widget">
-            <p class="premium-date">Дорогое говно, айфонодрочерам в рот нассали</p>
+            <p class="premium-body">{{ product.product.title }}</p>
         </div>
         <div class="premium-footer">
             <div class="premium-price">
-                Потеря девственности
+                {{ product.product.price }}$
+            </div>
+            <div class="premium-add-to-favorites">
+                <a href="{% url 'delete_favourite' product.id %}">
+                    <button class="premium-btn">delete from Favorites</button> 
+                </a>
             </div>
         </div>
-    </div> -->
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

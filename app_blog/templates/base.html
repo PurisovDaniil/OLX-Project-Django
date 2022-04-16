@@ -12,46 +12,40 @@
     <link rel="stylesheet" href="{% static 'css/other-style.css' %}">
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-widget-logo no-ph">
-            <button class="nav-widget-btn">
-                <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
-            </button>
+    <nav class="navbar">
+        <div class="nav-logo-widget">
+            <a href="{% url 'index' %}"><img src="{% static 'img/olx.png' %}" class="nav-logo"></a>
         </div>
         <ul class="menu">
             {% if user.is_authenticated %}
-            <a href="{% url 'messages' %}">
-                <li class="li-nav">Сообщения</li>
-            </a>
-            <a href="{% url 'favorites' %}">
-                <li class="li-nav">Избранное</li>
-            </a>
-            <a href="{% url 'logout' %}">
-                <li class="li-nav">
-                    Выйти из профиля
-                </li>
-            </a>
-            <a href="{% url 'addpost' %}">
-                <li class="li-nav">Подать объявление</li>
-            </a>
+            <li class="li-nav-first">
+                <a href="{% url 'messages' %}"><p class="margin0">Сообщения</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'favourites' %}"><p class="margin0">Избранное</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'logout' %}"><p class="margin0">Выйти</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'addpost' %}"><p class="margin0">Подать объявление</p></a>
+            </li>
             {% else %}
-            <a href="{% url 'authorisation' %}">
-                <li class="li-nav">Сообщения</li>
-            </a>
-            <a href="{% url 'authorisation' %}">
-                <li class="li-nav">Избранное</li>
-            </a>
-            <a href="{% url 'authorisation' %}">
-                <li class="li-nav">
-                    Войти в профиль
-                </li>
-            </a>
-            <a href="{% url 'authorisation' %}">
-                <li class="li-nav">Подать объявление</li>
-            </a>
+            <li class="li-nav-first">
+                <a href="{% url 'authorisation' %}"><p class="margin0">Сообщения</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'authorisation' %}"><p class="margin0">Избранное</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'authorisation' %}"><p class="margin0">Войти</p></a>
+            </li>
+            <li class="li-nav">
+                <a href="{% url 'authorisation' %}"><p class="margin0">Подать объявление</p></a>
+            </li>
             {% endif %}
         </ul>
-    </div>
+    </nav>
     {% block content %}
     {% endblock %}
     <div class="footer">
@@ -59,12 +53,7 @@
             <ul class="footer-menu">
                 <a href="{% url 'mobileapps' %}">
                     <li class="footer-li">
-                        Мобильные приложения
-                    </li>
-                </a>
-                <a href="{% url 'main_help' %}">
-                    <li class="footer-li">
-                        Помощь
+                        Мобильное приложение
                     </li>
                 </a>
                 <a href="{% url 'payments' %}">
@@ -72,31 +61,11 @@
                         Платные услуги
                     </li>
                 </a>
-                <a href="{% url 'reklama' %}">
-                    <li class="footer-li">
-                        Реклама на сайте
-                    </li>
-                </a>
-                <a href="{% url 'rules' %}">
-                    <li class="footer-li">
-                        Условия пользования
-                    </li>
-                </a>
-                <a href="{% url 'error' %}">
-                    <li class="footer-li">
-                        Политика конфиденциальности
-                    </li>
-                </a>
                 <li class="footer-li-frik">
                     <span class="no-ph">Партнёры</span><img src="{% static 'img/dropdown.PNG' %}" class="footer-img no-ph">
                 </li>
             </ul>
             <ul class="menu-second">
-                <a href="{% url 'buy' %}">
-                    <li class="footer-li-second">
-                        Как продавать и покупать?
-                    </li>
-                </a>
                 <a href="">
                     <li class="footer-li-second">
                         Правила безопасности

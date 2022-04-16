@@ -27,8 +27,6 @@
         <ul class="mini-menu">
             <li class="mini-li-nav"><a href="{% url 'messages_ads' %}">Объявления</a></li>
             <li class="mini-li-nav"><a href="{% url 'messages' %}" class="message-active">Сообщения</a></li>
-            <li class="mini-li-nav"><a href="{% url 'messages_wallet' %}">Платежи и счёт OLX</a></li>
-            <li class="mini-li-nav"><a href="{% url 'messages_settings' %}">Настройки</a></li>
         </ul>
     </div>
 </div>
@@ -44,18 +42,6 @@
             <span>Ваши сообщения будут храниться 4 месяца</span>
         </div>
     </div>
-    <!-- <form action="" class="select-message-form">
-        <div class="select-messages">
-            <p class="select-mes">Выберите сообщения</p>
-            <select name="" id="" class="select-message">
-                <option value="">Недавние</option>
-                <option value="">Непрочитанные</option>
-                <option value="">Важные</option>
-                <option value="">Отправленные вами</option>
-                <option value="">Полученные</option>
-            </select>
-        </div>
-    </form> -->
     <div class="nomessage-widget">
         <div class="nomessage">
             <div class="img-nomes-widget">
@@ -65,26 +51,5 @@
             <p class="nomes-second">Здесь будут храниться все отправленные и полученные сообщения</p>
         </div>
     </div>
-    <!-- <div class="chat">
-        <div class="chat-widget">                     
-            <div class="chat-username-widget">
-                <p class="chat-username">HomeOasis</p>
-            </div>
-            <div class="chat-theme-message-widget">
-                <div class="chat-theme">
-                    <p>Тема беседы</p>
-                </div>
-                <div class="chat-last-message">
-                    <p>Последнее сообщение из беседы</p>
-                </div>
-            </div>
-            <div class="chat-date-widget">
-                <div class="chat-date">
-                    <p>24 february</p>
-                    <p>18:52</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
 {% endblock %}

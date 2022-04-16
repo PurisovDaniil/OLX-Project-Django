@@ -10,7 +10,7 @@
             <div class="bg-olx">
                 {% csrf_token %}
                 {% if form.errors %}
-                <p class="error">Неправильно введен логин или пароль.</p>
+                <p class="error">Data entered incorrectly</p>
                 {% endif %}
                 <label for="username" class="username-label">Логин:</label>
                 <input type="text" name="username" value="" id="username" class="username-input">
