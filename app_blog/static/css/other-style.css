@@ -285,30 +285,6 @@
     padding: 20px;
     background-color: lavender;
 }
-.messages-li{
-    list-style-type: none;
-}
-.messages{
-    display: flex;
-}
-.messages a{
-    padding: 15px;
-    color: #002f34;
-    transition: all 0.5s ease;
-}
-.messages a:hover{
-    background-color: #002f34;
-    color: white;
-    box-shadow: inset 0 0 0 2px white;
-    border-radius: 10px;
-}
-.messages-li a:hover{
-    box-shadow: inset 0 0 0 1.5px #002f34;
-    background-color: white;
-    color: #002f34;
-    border-radius: 15px;
-    transition: .5s;
-}
 .month{
     display: flex;
     align-items: center;
@@ -390,7 +366,6 @@
     font-size: 32px;
     font-weight: bold;
     margin-top: 3%;
-    margin-bottom: 5%;
     color: #002f34;
 }
 .favorites-nomes-widget{

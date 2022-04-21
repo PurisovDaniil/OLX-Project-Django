@@ -7,16 +7,6 @@
 <div class="favorites-p">
     <p style="margin: 0; text-align: center;">Избранные объявления:</p>
 </div>
-<div class="favorites-nomes-widget">
-    <div class="favorites-nomes">
-        <div class="favorites-nomes-img-widget">
-            <img src="{% static 'img/nomes-favorites.PNG' %}" alt="" class="favorites-nomes-img">
-        </div>
-        <p class="favorites-nomes-p-main">Нет избранных объявлений</p>
-        <p class="favorites-nomes-p-second">Добавить в избранные можно со страницы объявления либо со страницы списка объявлений</p>
-        <p class="favorites-nomes-p-second">Теперь избранные объявения всегда доступны на любом компьютере, а также на мобильной версии сайта, после входа в Мои объявления</p>
-    </div>
-</div>
 
 <div class="favorite-card-widget">
     {% for product in product %}
@@ -38,6 +28,18 @@
             </div>
         </div>
     </div>
+    {% empty %}
+    <div class="favorites-nomes-widget">
+        <div class="favorites-nomes">
+            <div class="favorites-nomes-img-widget">
+                <img src="{% static 'img/nomes-favorites.PNG' %}" alt="" class="favorites-nomes-img">
+            </div>
+            <p class="favorites-nomes-p-main">Нет избранных объявлений</p>
+            <p class="favorites-nomes-p-second">Добавить в избранные можно со страницы объявления либо со страницы списка объявлений</p>
+            <p class="favorites-nomes-p-second">Теперь избранные объявления всегда доступны на любом компьютере, а также на мобильной версии сайта, после входа в Мои объявления</p>
+        </div>
+    </div>
     {% endfor %}
 </div>
+
 {% endblock %}

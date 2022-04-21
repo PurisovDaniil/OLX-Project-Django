@@ -163,6 +163,9 @@
         padding: 10% 25% 10% 25%;
         text-align: center;
     }
+    .photo-label{
+        padding: 40px 70px 40px 70px !important;
+    }
     .description-widget{
         width: 89%;
     }

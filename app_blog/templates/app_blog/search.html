@@ -27,7 +27,9 @@
                 {{product.price}}$
                 </div>
                 <div class="premium-add-to-favorites">
-                   <button class="premium-btn"><img src="{% static 'img/premium-favorite.PNG' %}" alt=""></button> 
+                   <button class="premium-btn">
+                    <a href="{% url 'add_favourite' product.id %}" style="color: white;">to Favorites</a>
+                   </button> 
                 </div>
             </div>
             </a>
