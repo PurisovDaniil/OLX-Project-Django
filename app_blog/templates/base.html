@@ -18,9 +18,6 @@
         </div>
         <ul class="menu">
             {% if user.is_authenticated %}
-            <li class="li-nav-first">
-                <a href="{% url 'messages' %}"><p class="margin0">Сообщения</p></a>
-            </li>
             <li class="li-nav">
                 <a href="{% url 'favourites' %}"><p class="margin0">Избранное</p></a>
             </li>
@@ -31,9 +28,6 @@
                 <a href="{% url 'addpost' %}"><p class="margin0">Подать объявление</p></a>
             </li>
             {% else %}
-            <li class="li-nav-first">
-                <a href="{% url 'authorisation' %}"><p class="margin0">Сообщения</p></a>
-            </li>
             <li class="li-nav">
                 <a href="{% url 'authorisation' %}"><p class="margin0">Избранное</p></a>
             </li>
@@ -66,22 +60,15 @@
                 </li>
             </ul>
             <ul class="menu-second">
-                <a href="">
-                    <li class="footer-li-second">
-                        Правила безопасности
-                    </li>
-                </a>
-                <a href="">
-                    <li class="footer-li-second">
-                        Карьера в OLX
-                    </li>
-                </a>
-                <a href="">
-                    <li class="footer-li-second">
-                        Обратная связь
-                    </li>
-                </a>
-                
+                <li class="footer-li-second">
+                    <a href="{% url 'careers' %}">Каръера в OLX</a>
+                </li>
+                <li class="footer-li-second">
+                    <a href="{% url 'developers' %}">О разработчиках этого сайта</a>
+                </li>
+                <li class="footer-li-second">
+                    <a href="{% url 'contact_us' %}">Обратная связь</a>
+                </li>
             </ul>
             <div class="footer-widgets no-ph">
                 <div class="footer-widgets-flex">

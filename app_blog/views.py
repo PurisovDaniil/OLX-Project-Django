@@ -8,6 +8,7 @@ from django.utils import timezone
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.db.models.deletion import ProtectedError
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -141,10 +142,6 @@ def delete(request, id):
             return HttpResponse('не нихуя')
     return render(request, 'app_blog/delete.html', {'product':product})
 
-
-def messages(request):
-    return render(request, 'app_blog/messages.html')
-
 def messages_ads(request):
     return render(request, 'app_blog/messages_ads.html')
 
@@ -167,3 +164,14 @@ def update_product(request, id):
     product = Product.objects.get(id=id)
     if request.method == 'POST':
         product.title = request
+
+def contact_us(request):
+    if request.method == 'POST':
+        message_name = request.POST['message_name']
+        message_email = request.POST['message_email']
+        message = request.POST['message']
+        context = {'message_name':message_name, 'message_email':message_email, 'message':message}
+        send_mail(message_name, message, message_email, ['daniilpurisov393@gmail.com'])
+        return render(request, 'app_blog/contact_us', context)
+    else:
+        return render(request, 'app_blog/contact_us.html')

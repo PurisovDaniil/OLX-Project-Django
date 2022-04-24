@@ -12,7 +12,6 @@ urlpatterns = [
     path('authorisation/', views.authorisation, name = 'authorisation'),
     path('addpost/', views.addpost, name = 'addpost'),
     path('favourites/', views.favourites, name = 'favourites'),
-    path('myaccount/answers/', views.messages, name = 'messages'),
     path('favourite/add/<int:product_id>/', views.add_to_favourite, name = 'add_favourite'),
     path('favourite/delete/<int:item_id>/', views.delete_favourite, name = 'delete_favourite'),
     path('myaccount/ads/', views.messages_ads, name = 'messages_ads'),
@@ -27,4 +26,5 @@ urlpatterns = [
     path('update/<int:id>', views.update, name = 'update'),
     path('olx/help', views.mainhelp, name = 'main_help'),
     path('olx/payments', views.payments, name = 'payments'),
+    path('contact_us/', views.contact_us, name='contact_us'),
 ]

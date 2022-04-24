@@ -4,5 +4,38 @@
 {{category_title}}
 {% endblock %}
 {% block content %}
-
+<div class="category-detail-widget">
+    {% for product in category.product_set.all %}
+    <div class="premium-card">
+        <a href="{% url 'post_detail_url' product.id %}">
+        {% if product.image.url != null %}
+        <div class="premium-img-widget">
+            <img src="{{ product.image.url }}" alt="..." class="premium-img">
+        </div>
+        {% else %}
+        <div class="premium-img-widget">
+            <img src="{% static 'img/1.jpg' %}" alt="" class="premium-img">
+        </div>
+        {% endif %}
+        <div class="premium-body-widget">
+            <p class="premium-body"><a href="{% url 'post_detail_url' product.id %}" class="post-detail-a">{{product.title}}</a></p>
+        </div>
+        <div class="premium-footer">
+            <div class="premium-price">
+            {{product.price}}$
+            </div>
+            <div class="premium-add-to-favorites">
+                <a href="{% url 'add_favourite' product.id %}">
+                    <button class="premium-btn">to Favorites</button> 
+                </a>
+            </div>
+        </div>
+        </a>
+    </div>
+    {% empty %}
+    <div class="category-detail-empty">
+        <p class="empty-category">В данном разделе отсутствуют какие-либо объявления, вы можете добавить их, выбрав определенную категорию в разделе "Подать объявление".</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

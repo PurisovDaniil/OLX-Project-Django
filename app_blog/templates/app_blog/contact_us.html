@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact Us
+{% endblock %}
+{% block content %}
+{% if message_name %}
+<p style="text-align: center;">Thanks {{ message_name }}</p>
+<p style="text-align: center;">We received your email and well respond shortly...</p>
+{% else %}
+<div class="send-mail">
+    <p class="contact-us-p">Обратная связь с нами</p>
+    <div class="send-mail-widget">
+        <form action="{% url 'contact_us' %}" method="POST" class="send-form">
+            {% csrf_token %}
+            <div class="input-name-widget">
+                <input type="text" placeholder="Name" class="input-name" required name="message_name">
+            </div>
+            <div class="input-email-widget">
+                <input type="email" placeholder="Email" class="input-email" required name="message_email">
+            </div>
+            <div class="message-text-widget">
+                <textarea name="message" placeholder="Message" required class="textarea-message" style="resize: none;"></textarea>
+            </div>
+            <button class="send">Отправить</button>
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
