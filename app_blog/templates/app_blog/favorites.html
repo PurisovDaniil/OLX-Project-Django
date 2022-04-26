@@ -11,9 +11,10 @@
 <div class="favorite-card-widget">
     {% for product in product %}
     <div class="premium-card">
-        {% if product.image.url != null %}
+        <a href="{% url 'post_detail_url' product.id %}">
+        {% if product.product.image.url != null %}
         <div class="premium-img-widget">
-            <img src="{{ product.product.image.url }}" alt="" class="premium-img">
+            <img src="{{ product.product.image.url }}" alt="..." class="premium-img">
         </div>
         {% else %}
         <div class="premium-img-widget">
@@ -21,11 +22,11 @@
         </div>
         {% endif %}
         <div class="premium-body-widget">
-            <p class="premium-body">{{ product.product.title }}</p>
+            <p class="premium-body"><a href="{% url 'post_detail_url' product.id %}" class="post-detail-a">{{product.product.title}}</a></p>
         </div>
         <div class="premium-footer">
             <div class="premium-price">
-                {{ product.product.price }}$
+            {{product.product.price}}$
             </div>
             <div class="premium-add-to-favorites">
                 <a href="{% url 'delete_favourite' product.id %}">
@@ -33,6 +34,7 @@
                 </a>
             </div>
         </div>
+
     </div>
     {% empty %}
     <div class="favorites-nomes-widget">

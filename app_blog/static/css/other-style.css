@@ -184,6 +184,10 @@
     padding: 20px;
     width: 70.2%;
 }
+.favorite-card-widget{
+    display: flex;
+    justify-content: center;
+}
 .favorite-btn{
     border: none;
     background-color: transparent;
