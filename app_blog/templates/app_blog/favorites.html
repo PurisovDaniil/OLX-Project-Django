@@ -5,10 +5,10 @@
 {% endblock %}
 {% block content %}
 <div class="favorites-p">
-    <p style="margin: 0; text-align: center;">Избранные объявления:</p>
+    <p style="text-align: center;">Избранные объявления:</p>
 </div>
 
-<div class="favorite-card-widget">
+<div class="premium-card-widget">
     {% for product in product %}
     <div class="premium-card">
         <a href="{% url 'post_detail_url' product.id %}">

@@ -51,9 +51,6 @@
     .head-register{
         text-align: center;
     }
-    .reklama-widget{
-        text-align: center;
-    }
     .post-detail-contact-content{
         display: block;
         flex-wrap: wrap;
@@ -74,10 +71,6 @@
     .author-description{
         width: 91% !important;
     }
-    .message-send-btn-widget{
-        display: flex;
-        justify-content: center;
-    }
     .post-description-widget{
         margin-left: 0px !important;
     }
@@ -93,12 +86,6 @@
         margin-right: 3%;
         margin-bottom: 5%;
     }
-    .message-description-widget{
-        width: 94% !important;
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-bottom: 5%;
-    }
     .title-message-widget{
         display: block !important;
         width: 100%;
@@ -106,56 +93,10 @@
     .title-message-p{
         text-align: center;
     }
-    .title-pay-widget{
-        display: flex;
-        justify-content: center;
-    }
     .content-developers-cards{
         display: block !important;
     }
     .developer-img-widget{
-        display: flex;
-        justify-content: center;
-    }
-    .messages-widget{
-        display: block !important;
-    }
-    .balance-widget{
-        display: block !important;
-    }
-    .balance-widget-btns{
-        margin-top: 5%;
-    }
-    .balance-span{
-        display: flex;
-        justify-content: center;
-    }
-    .mini-menu{
-        display: block !important;
-        text-align: center;
-    }
-    .messages-li{
-        padding: 10px 0 10px 0;
-    }
-    .messages{
-        display: block !important;
-        text-align: center;
-    }
-    .month{
-        display: flex;
-        justify-content: center;
-    }
-    .chat-widget{
-        display: block;
-        text-align: center;
-        padding: 10px;
-    }
-    .chat-username-widget{
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-    }
-    .select-message-form{
         display: flex;
         justify-content: center;
     }
@@ -171,5 +112,20 @@
     }
     .pagination{
         width: 70% !important;
+    }
+    .mobileapps-img{
+        width: 100%;
+    }
+    .mobilesuccess-widget{
+        margin-top: 10%;
+    }
+    .input-name{
+        width: 80% !important;
+    }
+    .input-email{
+        width: 80% !important;
+    }
+    .textarea-message{
+        width: 80% !important;
     }
 }
