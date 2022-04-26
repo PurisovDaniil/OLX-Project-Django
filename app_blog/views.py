@@ -48,18 +48,6 @@ def delete_favourite(request, item_id):
 def mobileapps(request):
     return render(request, 'app_blog/mobileapps.html')
 
-def mainhelp(request):
-    return render(request, 'app_blog/help.html')
-
-def payments(request):
-    return render(request, 'app_blog/payments.html')
-
-def reklama(request):
-    return render(request, 'app_blog/reklama.html')
-
-def rules(request):
-    return render(request, 'app_blog/rules.html')
-
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -143,14 +131,8 @@ def delete(request, id):
             return HttpResponse('не нихуя')
     return render(request, 'app_blog/delete.html', {'product':product})
 
-def messages_ads(request):
-    return render(request, 'app_blog/messages_ads.html')
-
 def developers(request):
     return render(request, 'app_blog/developers.html')
-
-def error(request):
-    return render(request, 'app_blog/error.html')
 
 def careers(request):
     return render(request, 'app_blog/cariera-index.html')
@@ -160,11 +142,6 @@ def hybrid(request):
 
 def story(request):
     return render(request, 'app_blog/careers-story.html')
-
-def update_product(request, id):
-    product = Product.objects.get(id=id)
-    if request.method == 'POST':
-        product.title = request
 
 def contact_us(request):
     if request.method == 'POST':

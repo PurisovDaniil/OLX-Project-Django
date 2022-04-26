@@ -430,11 +430,6 @@ a{
     list-style: none;
     margin: 10px 10px 20px 10px;
 }
-.footer-img{
-    width: 35px;
-    display: flex;
-    align-items: center;
-}
 .footer-content{
     display: flex;
 }

@@ -82,26 +82,19 @@
     <div class="footer">
         <div class="footer-content">
             <ul class="footer-menu">
-                <a href="{% url 'mobileapps' %}">
-                    <li class="footer-li">
+                <li class="footer-li">
+                    <a href="{% url 'mobileapps' %}" style="color: #002f34;">
                         Мобильное приложение
-                    </li>
-                </a>
-                <a href="{% url 'payments' %}">
-                    <li class="footer-li">
-                        Платные услуги
-                    </li>
-                </a>
-                <li class="footer-li-frik no-ph">
-                    <span class="no-ph">Партнёры</span> <img src="{% static 'img/dropdown.PNG' %}" class="footer-img no-ph">
+                    </a>
+                </li>
+                <li class="footer-li">
+                    <a href="{% url 'careers' %}" style="color: #002f34;">Карьера в OLX</a>
+                </li>
+                <li class="footer-li no-ph" style="font-size: 19px;">
+                    Партнёры:
                 </li>
             </ul>
             <ul class="menu-second">
-                <a href="{% url 'careers' %}">
-                    <li class="footer-li-second">                    
-                        Карьера в OLX
-                    </li>
-                </a>
                 <a href="{% url 'developers' %}">
                     <li class="footer-li-second">
                         О разработчиках этого сайта

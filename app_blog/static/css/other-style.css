@@ -272,17 +272,8 @@
     width: 97%;
     padding: 20px;
 }
-.title-message-p{
-    color: #002f34;
-    font-size: 32px;
-    font-weight: bold;
-}
 .balance-widget{
     display: flex;
-}
-.title-message-widget{
-    display: flex;
-    justify-content: space-between;
 }
 .balance-widget span{
     display: flex;
@@ -357,10 +348,6 @@
     padding: 20px;
     width: 97%;
 }
-.messages-head{
-    padding: 20px;
-    background-color: lavender;
-}
 .month{
     display: flex;
     align-items: center;
@@ -421,23 +408,6 @@
 .chat-date{
     text-align: end;
 }
-.nomessage-widget{
-    display: flex;
-    justify-content: center;
-}
-.nomessage{
-    text-align: center;
-}
-.nomes-first{
-    color: #002f34;
-    font-size: 21.5px;
-    font-weight: bold;
-}
-.nomes-second{
-    color: rgb(127, 151, 153);
-    font-size: 15.5px;
-    font-weight: bold;
-}
 .favorites-p{
     font-size: 32px;
     font-weight: bold;
@@ -469,25 +439,6 @@
 }
 .message-active{
     text-shadow: #002f34 1px 0 8px;
-}
-.all-ads-p{
-    border-bottom: rgb(216, 190, 224) solid 0.3px;
-    padding-bottom: 5px;
-}
-.noads-flex{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 8%;
-    padding-bottom: 15%;
-}
-.noads-p-first{
-    color: #002f34;
-    font-size: 23px;
-    font-weight: bold;
-}
-.noads-p-second{
-    color: rgb(127, 151, 153);
 }
 .all-ads-widget{
     padding-left: 4%;
@@ -540,14 +491,6 @@
     color: #002f34;
     font-weight: bold;
 }
-.favorite-card-widget{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 6%;
-    margin-left: 4.5%;
-    flex-wrap: wrap;
-    width: 90%;
-}
 .message-ads-widget{
     display: flex;
     justify-content: center;
@@ -565,28 +508,6 @@
 .nav-widget-logo{
     width: 40%;
 }
-
-.more_profile-p{
-    text-align: center;
-    color: #002f34;
-    font-size: 30px;
-    font-weight: bold;
-}
-.more_profile-p-second{
-    text-align: center;
-    color: rgb(127, 170, 153);
-}
-.more_profile-registration-widget{
-    padding: 2%;
-    background-color: white;
-    width: 23%;
-    border-radius: 5px;
-    text-align: center;
-}
-.more_profile-widget-center{
-    display: flex;
-    justify-content: center;
-}
 .reg-p-bold-first{
     font-size: 20px;
     font-weight: bold;
@@ -602,101 +523,12 @@
 .reg-p-first:hover{
     text-shadow: rgb(127, 170, 153) 1px 0 8px;
 }
-.reg-p-second{
-    color: #002f34;
-}
-.reg-p-bold-second{
-    font-size: 20px;
-    font-weight: bold;
-    color: #002f34;
-}
-.reg-p-bold-second:hover{
-    text-shadow: #002f34 1px 0 8px;
-}
-.reg-p-second:hover{
-    text-shadow: rgb(127, 170, 153) 1px 0 8px;
-}
-.reg-p{
-    color: #002f34;
-    font-size: 18px;
-    padding-top: 18%;
-}
-.error-content{
-    margin-top: 6%;
-    margin-left: 8%;
-    margin-bottom: 10%;
-}
-.error-p{
-    color: #002f34;
-    font-size: 28px;
-    font-weight: bold;
-}
-.reg-p-bold{
-    font-size: 20px;
-    font-weight: bold;
-    color: #002f34;
-}
-.reg-p:hover{
-    text-shadow: rgb(127, 170, 153) 1px 0 8px;
-}
-.reg-p-bold:hover{
-    text-shadow: #002f34 1px 0 8px;
-}
-.reg-p-btn{
-    padding: 10px 20px 10px 20px;
-    border: none;
-    outline: none;
-    background-color: #002f34;
-    border-radius: 5px;
-    transition: .4s;
-}
-.reg-p-btn-a{
-    color: white;
-}
-.reg-p-btn:hover{
-    background-color: black;
-    transition: .4s;
-    cursor: pointer;
-}
+
 .left-block{
     width: 16%;
 }
 .content-ad{
     font-family: roboto;
-}
-.content-profile-registration{
-    padding: 8%;
-    display: flex;
-}
-.profile-active{
-    color: gray;
-}
-.left-block-a{
-    color: #002f34;
-}
-.left-block-p{
-    color: #002f34;
-    font-weight: bold;
-    font-size: 18px;
-}
-.left-block-a:hover{
-    color: gray;
-}
-.center-block-img-first{
-    width: 100%;
-}
-.center-block{
-    margin-left: 5%;
-}
-.center-block-head-p{
-    color: #002f34;
-    font-weight: bold;
-    font-size: xx-large;
-}
-.center-block-p{
-    color: #002f34;
-    font-size: large;
-    font-weight: bold;
 }
 .author-link:active{
     color: #002f34;
@@ -705,32 +537,10 @@
     color: #002f34;
     text-decoration: underline solid #002f34;
 }
-.center-block-padding{
-    padding-left: 3%;
-}
-.center-block-uvedom{
-    color: red;
-}
 .profile-p{
     color: #002f34;
     font-size: xx-large;
     font-weight: bold;
-}
-.profile-p-body{
-    color: #002f34;
-    font-size: large;
-    transition: .3s;
-    width: max-content;
-}
-.profile-padding{
-    margin-left: 8%;
-    margin-top: 7%;
-    margin-bottom: 7%;
-    width: 300px;
-}
-.profile-p-body:hover{
-    color: #0b76ef;
-    transition: .3s;
 }
 .category-widget{
     display: flex;
@@ -798,11 +608,6 @@
     justify-content: center;
     align-items: center;
 }
-.title-message-head{
-    background-color: white;
-    padding: 20px;
-    font-family: roboto;
-}
 .mobileapps-widget{
     background-color: rgb(206, 221, 255);
 }
@@ -848,156 +653,9 @@
     font-size: x-large;
     color: #002f34;
 }
-.payments-head-widget{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
-.payments-uslugi{
-    margin-top: 8%;
-}
-.payments-title{
-    margin-left: 10%;
-    font-size: 34px;
-    width: 29%;
-    text-align: center;
-    font-weight: bold;
-    color: #002f34;
-    text-shadow: #002f34 1px 0 1px;
-}
-.payments-card{
-    background-color: white;
-    padding: 1.5% 7% 1.5% 7%;
-    margin-right: 3%;
-    text-align: center;
-    border-radius: 10px;
-}
-.payments-title-foot{
-    text-align: center;
-    color: rgb(127, 170, 153);
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 2%;
-}
-.payments-card-title{
-    font-weight: bold;
-    color: #002f34;
-    font-size: 20px;
-}
-.payments-uslugi-title{
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    color: #002f34;
-}
-.payments-uslugi-cards{
-    display: flex;
-    justify-content: center;
-}
-.payments-pay-head{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.payments-new{
-    margin-left: 1%;
-    background-color: rgb(35, 229, 219);
-    padding: 0.5% 1.3% 0.5% 1.3%;
-}
-.payments-pay-head-title{
-    color: #002f34;
-    font-size: xx-large;
-    font-weight: bold;
-}
-.payments-pay-title{
-    text-align: center;
-    font-size: 18px;
-    color: #002f34;
-}
-.payments-pay-card-widget{
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-}
-.payments-pay-card{
-    background-color: white;
-    padding: 1.3% 5% 1.3% 5%;
-    border-radius: 10px;
-    margin-left: 2%;
-}
-.payments-pay-card-foot-widget{
-    display: flex;
-    align-items: center;
-}
-.payments-pay-card-title-title{
-    text-align: center;
-    color: #002f34;
-    font-weight: bold;
-    font-size: x-large;
-}
-.payments-pay-card-title-foot-title{
-    color: #0b76ef;
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
-}
-.payments-add-post-widget{
-    display: flex;
-    justify-content: center;
-}
-.payments-add-post-title{
-    font-size: 28px;
-    width: 60%;
-    font-weight: bold;
-    color: #002f34;
-}
-.payments-add-post-title-widget{
-    display: flex;
-    justify-content: center;
-}
-.payments-add-post-new{
-    margin-top: 5%;
-    background-color: white;
-    width: 30%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-}
 .my-profile{
     text-align: center;
 }
-.payments-add-btn{
-    background-color: #002f34;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px 10px 15px;
-    margin-top: 3%;
-}
-.payments-add-btn-a{
-    color: white;
-    transition: .3s;
-}
-.payments-add-btn:hover .payments-add-btn-a{
-    color: greenyellow;
-    transition: .4s;
-}
-.reklama-content{
-    color: slategrey;
-    margin-left: 4%;
-    margin-top: 2%;
-}
-.reklama-ul{
-    width: 55%;
-}
-.li-frik a{
-    color: #002f34;
-}
-.p-frik{
-    margin-top: 3.5%;
-}
-
-
 .carousel-gallery{
     display: flex;
     align-items: center;
