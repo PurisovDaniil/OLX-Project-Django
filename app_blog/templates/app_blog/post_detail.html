@@ -14,13 +14,22 @@
     </div>
     <div class="gps-widget">
         <div class="gps-widget-center">
-            <p class="gps-p">Местоположение:</p>
+            <p class="gps-p" style="margin-bottom: 5%;">Местоположение:</p>
             <div class="d-flex">
                 <div>
                     <img src="{% static 'img/gps-tracker.PNG' %}" alt="" style="width: 50px;">
                 </div>
                 <div style="display: flex; align-items: center; width: 80%;">
                     <span>{{product.sity_title}}</span>
+                </div>
+            </div>
+            <p class="gps-p" style="margin-top: 20%; margin-bottom: 5%;">Телефонный номер:</p>
+            <div class="d-flex">
+                <div>
+                    <img src="{% static 'img/call.png' %}" style="width: 50px;">
+                </div>
+                <div style="display: flex; align-items: center; width: 80%;">
+                    +{{product.usernumber}}
                 </div>
             </div>
         </div>
@@ -33,36 +42,11 @@
                 <p class="post-detail-title">{{product.title}}</p>
                 <p class="post-price">Цена: {{product.price}}$</p>
                 <p class="post-detail-description">Описание:</p>
+                <hr>
                 <p class="post-detail-dsc">{{product.description}}</p>
                 <hr>
-                <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                    <p><a href="" class="d-flex" style="align-items: center; color: black;">
-                        <img src="{% static 'img/red-flag.PNG' %}" alt="">Пожаловаться
-                    </a></p>
-                </div>
             </div>
-        </div>
-        <div class="message-description-widget">
-            <form action="" method="" class="form-send-message">
-                <div class="author-description">
-                    <div class="author-description-widget">
-                        <div class="author">
-                            <img src="{% static 'img/avatar.PNG' %}" alt="">
-                            <p>{{product.username}}</p>
-                        </div>
-                        <div class="author-phone-widget">
-                            <img src="{% static 'img/call.PNG' %}" alt="">
-                            <p class="author-phone">{{product.usernumber}}</p>
-                        </div>
-                    </div>
-                    <div class="message-send">
-                        <textarea name="" id="" placeholder="Напишите сообщение..." style="resize: none;" class="message-send-textarea"></textarea>
-                    </div>
-                    <div class="message-send-btn-widget">
-                        <button class="message-send-btn">Отправить</button>
-                    </div>
-                </div>
-            </form>
+            <a href="{% url 'contact_us' %}" style="color: #002f34; font-size: larger; text-align: end;">Обратная связь</a>
         </div>
     </div>
 </div>

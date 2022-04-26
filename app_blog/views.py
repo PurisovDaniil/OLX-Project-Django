@@ -102,6 +102,7 @@ def create(request):
     if request.method == 'POST':
         product = Product()
         product.title = request.POST.get('title')
+        product.category = Category.objects.get(id=request.POST.get('category'))
         product.description = request.POST.get('description')
         if request.FILES.get('image', False) != False:
             myfile = request.FILES['image']
@@ -172,6 +173,6 @@ def contact_us(request):
         message = request.POST['message']
         context = {'message_name':message_name, 'message_email':message_email, 'message':message}
         send_mail(message_name, message, message_email, ['daniilpurisov393@gmail.com'])
-        return render(request, 'app_blog/contact_us', context)
+        return render(request, 'app_blog/contact_us.html', context)
     else:
         return render(request, 'app_blog/contact_us.html')

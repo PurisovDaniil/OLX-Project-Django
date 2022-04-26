@@ -1,9 +1,10 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block title %}
-{{category_title}}
+{{ category.title }}
 {% endblock %}
 {% block content %}
+<p style="text-align: center; color: #002f34; font-size: x-large; font-weight: bold;">Объявления в категории {{category.title}}: </p>
 <div class="category-detail-widget">
     {% for product in category.product_set.all %}
     <div class="premium-card">

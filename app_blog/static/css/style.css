@@ -152,6 +152,7 @@ a{
 }
 .title{
     padding-top: 17px;
+    margin-bottom: 0;
     font-size: xx-large;
     font-family: roboto;
 }
@@ -199,7 +200,7 @@ a{
 }
 .object-input-widget:focus{
     outline: #002f34 solid 0.7px;
-    box-shadow: #002f34 2px 0 10px;
+    box-shadow: inset #002f34 0px 0 7px;
 }
 .category-select{
     padding: 18px;
@@ -218,11 +219,12 @@ a{
     background-color: lavender;
     resize: none;
     font-size: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: roboto;
 }
 .description-widget:focus{
-    box-shadow: #002f34 2px 0 10px;
+    box-shadow: inset #002f34 0px 0 8px;
     border: solid #002f34 0.5px;
+    padding: 12px;
 }
 .send-widget{
     margin-top: 3%;
@@ -257,6 +259,9 @@ a{
     padding-left: 2%;
     padding-right: 2%;
     margin-top: 2%;
+}
+.category-get:hover{
+    color: #002f34;
 }
 .premium-card-widget{
     display: flex;

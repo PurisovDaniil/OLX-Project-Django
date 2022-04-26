@@ -85,6 +85,12 @@
     outline: solid #002f34 0.5px;
     border: none;
 }
+.index-noads-title{
+    color: #002f34;
+    font-size: larger;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 .photo-label-widget{ 
    display: flex;
 }
@@ -171,6 +177,7 @@
 .post-description-widget{
     font-family: roboto;
     margin-left: 2%;
+    margin-bottom: 5%;
 }
 .post-description{
     background-color: white;
@@ -729,6 +736,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+.category-detail-widget{
+    display: flex;
+    justify-content: center;
 }
 .img-card{
     width: 100%;

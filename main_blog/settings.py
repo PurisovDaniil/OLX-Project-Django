@@ -133,3 +133,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'daniilpurisov393@gmail.com'
+EMAIL_HOST_PASSWORD = 'wfwqviibdquqnbqs'
+EMAIL_USE_TLS = True

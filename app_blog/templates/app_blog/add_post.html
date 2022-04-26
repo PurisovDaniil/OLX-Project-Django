@@ -13,9 +13,9 @@
             <p class="ad-name-second">Укажите название*</p>
             <input type="text" placeholder="Например, iPhone 8" class="object-input-widget" name="title" required>
             <p>Выберите категорию*</p>
-            <select id="" class="category-select">
+            <select id="" name="category" class="category-select">
                 {% for category in category %}
-                <option value="" class="category-select-option">{{ category.title }}</option>
+                <option value="{{category.id}}" class="category-select-option">{{ category.title }}</option>
                 {% endfor %}
             </select>
             <div class="photo-widget">

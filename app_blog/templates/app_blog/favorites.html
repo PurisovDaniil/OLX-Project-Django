@@ -11,9 +11,15 @@
 <div class="favorite-card-widget">
     {% for product in product %}
     <div class="premium-card">
+        {% if product.image.url != null %}
         <div class="premium-img-widget">
             <img src="{{ product.product.image.url }}" alt="" class="premium-img">
         </div>
+        {% else %}
+        <div class="premium-img-widget">
+            <img src="{% static 'img/1.jpg' %}" alt="" class="premium-img">
+        </div>
+        {% endif %}
         <div class="premium-body-widget">
             <p class="premium-body">{{ product.product.title }}</p>
         </div>

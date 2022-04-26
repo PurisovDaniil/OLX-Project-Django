@@ -47,6 +47,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE)
     users = models.ManyToManyField(User, related_name='favorite_products')
     price = models.IntegerField(default=False)
     description = models.CharField(max_length=455)

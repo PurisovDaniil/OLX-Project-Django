@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}
-Contact Us
+Обратная связь
 {% endblock %}
 {% block content %}
 {% if message_name %}
-<p style="text-align: center;">Thanks {{ message_name }}</p>
-<p style="text-align: center;">We received your email and well respond shortly...</p>
+<p style="text-align: center;">Благодарны вам за ваше обращение к нам, {{ message_name }}.</p>
+<p style="text-align: center;">Мы получили ваше письмо и в кратчайшие сроки проверим его.</p>
 {% else %}
 <div class="send-mail">
     <p class="contact-us-p">Обратная связь с нами</p>
